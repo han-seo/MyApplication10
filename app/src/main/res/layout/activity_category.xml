@@ -23,32 +23,40 @@
         android:layout_width="250dp"
         android:layout_height="77dp"
         android:layout_marginTop="48dp"
+        android:backgroundTint="#FFFFFF"
+        android:shadowColor="#AAAAAA"
         android:text="헤어 / 메이크업"
+        android:textColor="#5E5E5E"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:cornerRadius="@android:dimen/app_icon_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:strokeColor="#B8B8B8" />
 
     <Button
         android:id="@+id/btn_studio"
         android:layout_width="250dp"
         android:layout_height="77dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#B5B5B5"
+        android:breakStrategy="high_quality"
         android:text="스튜디오"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hair" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_hair"
+        app:strokeColor="#B8B8B8" />
 
     <Button
         android:id="@+id/btn_model"
         android:layout_width="250dp"
         android:layout_height="77dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:text="모델"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -68,6 +76,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_model" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_model"
+        app:layout_constraintVertical_bias="0.142" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
