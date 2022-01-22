@@ -20,8 +20,8 @@
 
     <Button
         android:id="@+id/btn_hair"
-        android:layout_width="250dp"
-        android:layout_height="77dp"
+        android:layout_width="330dp"
+        android:layout_height="78dp"
         android:layout_marginTop="48dp"
         android:backgroundTint="#FFFFFF"
         android:shadowColor="#AAAAAA"
@@ -38,8 +38,8 @@
 
     <Button
         android:id="@+id/btn_studio"
-        android:layout_width="250dp"
-        android:layout_height="77dp"
+        android:layout_width="330dp"
+        android:layout_height="78dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#FFFFFF"
         android:breakStrategy="high_quality"
@@ -57,29 +57,42 @@
 
     <Button
         android:id="@+id/btn_model"
-        android:layout_width="250dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="330dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:breakStrategy="high_quality"
+        android:shadowColor="#AAAAAA"
         android:text="모델"
+        android:textColor="#5E5E5E"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:cornerRadius="@android:dimen/app_icon_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_studio" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_studio"
+        app:strokeColor="#B8B8B8" />
 
     <Button
-        android:id="@+id/btn_photoG"
-        android:layout_width="250dp"
-        android:layout_height="77dp"
+        android:id="@+id/btn_photo"
+        android:layout_width="330dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:breakStrategy="high_quality"
+        android:shadowColor="#AAAAAA"
         android:text="사진작가"
+        android:textColor="#5E5E5E"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:cornerRadius="@android:dimen/app_icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_model"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.045"
+        app:strokeColor="#B8B8B8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
