@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/but"
+        android:id="@+id/Btn_Go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="116dp"
@@ -20,11 +20,11 @@
         android:id="@+id/Btn_shift"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="66dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="80dp"
         android:backgroundTint="#D1B2B2"
         android:text="로그인 페이지로 이동"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but" />
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Go" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
