@@ -7,8 +7,7 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
-    //이것도 테스트용 나중에 지우기기
-
+    //테스트용 버튼
     lateinit var Btn_Go : Button
     lateinit var Btn_shift : Button
 
@@ -16,17 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //잘되는지 테스트
+        //잘되는지 테스트-->안됨
        Btn_Go = findViewById(R.id.Btn_Go)
        Btn_Go.setOnClickListener{
            var intent = Intent(this, category::class.java)
            startActivity(intent)
        }
 
-       Btn_shift = findViewById(R.id.Btn_Go)
+/*       Btn_shift = findViewById(R.id.Btn_Go)
        Btn_shift.setOnClickListener{
            var intent = Intent(this, Login::class.java)
            startActivity(intent)
-       }
+       }*/
     }
 }
