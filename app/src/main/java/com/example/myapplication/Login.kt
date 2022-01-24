@@ -9,19 +9,21 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class Login : AppCompatActivity() {
 
-    lateinit var button2 : Button
-    lateinit var button3 : Button
+    lateinit var Button1 : Button
+    lateinit var Button2 : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        Button1 =  findViewById<Button>(R.id.btn_search)
+        Button2 =  findViewById<Button>(R.id.btn_join)
 
-        button2.setOnClickListener{
+        Button1.setOnClickListener{
             val intent = Intent(this, IdpwSearch::class.java)
             startActivity(intent) }
 
-        button3.setOnClickListener{
+        Button2.setOnClickListener{
             val intent = Intent(this, Join::class.java)
             startActivity(intent) }
 

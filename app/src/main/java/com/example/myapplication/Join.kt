@@ -6,13 +6,15 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 class Join : AppCompatActivity() {
 
-    lateinit var button5 : Button
+    lateinit var Button5 : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_join)
 
-        button5.setOnClickListener {
+        Button5 = findViewById<Button>(R.id.btn_confirm)
+
+        Button5.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
