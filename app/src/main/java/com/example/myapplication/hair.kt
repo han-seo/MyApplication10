@@ -53,6 +53,7 @@ class hair : AppCompatActivity() {
 
         listView.setOnItemClickListener { parent: AdapterView<*>, view: View, position: Int, id: Long ->
             val item = parent.getItemAtPosition(position) as ListViewItem
+
             builder.setTitle("${item.title}")
             builder.setMessage("${item.subTitle}")
             builder.setIcon(item.icon)
