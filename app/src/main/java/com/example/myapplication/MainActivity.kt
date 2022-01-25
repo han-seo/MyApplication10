@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //잘되는지 테스트-->안됨
+        //잘되는지 테스트-->안됨..
        Btn_Go = findViewById(R.id.Btn_Go)
        Btn_Go.setOnClickListener{
            var intent = Intent(this, category::class.java)
