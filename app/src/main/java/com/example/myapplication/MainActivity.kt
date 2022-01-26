@@ -11,21 +11,31 @@ class MainActivity : AppCompatActivity() {
     lateinit var Btn_Go : Button
     lateinit var Btn_shift : Button
 
+    private fun saveData(name:String, sns :String) {
+    val pref = this.getPreferences(0)
+      val editor=pref.edit()
+      editor.putString("KEY_NAME",name)
+               .putString("KEY_SNS",sns)
+              .apply()
+    }
+
    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //잘되는지 테스트-->안됨..
+
        Btn_Go = findViewById(R.id.Btn_Go)
        Btn_Go.setOnClickListener{
            var intent = Intent(this, category::class.java)
            startActivity(intent)
        }
 
-/*       Btn_shift = findViewById(R.id.Btn_Go)
        Btn_shift.setOnClickListener{
-           var intent = Intent(this, Login::class.java)
-           startActivity(intent)
-       }*/
+           val intent = Intent(this, Login::class.java)
+
+           startActivity(intent) }
     }
+
+
+
 }

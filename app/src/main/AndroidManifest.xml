@@ -22,8 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Login"/>
-        <activity android:name=".IdpwSearch"/>
-        <activity android:name=".Join"/>
+       <activity android:name=".IdpwSearch"/>
+       <activity android:name=".Join"/>
     </application>
 
 </manifest>
