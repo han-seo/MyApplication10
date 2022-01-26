@@ -11,6 +11,14 @@ class MainActivity : AppCompatActivity() {
     lateinit var Btn_Go : Button
     lateinit var Btn_shift : Button
 
+    private fun saveData(name:String, sns :String) {
+        val pref = this.getPreferences(0)
+        val editor=pref.edit()
+        editor.putString("KEY_NAME",name)
+                .putString("KEY_SNS",sns)
+                .apply()
+    }
+
    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,10 +30,10 @@ class MainActivity : AppCompatActivity() {
            startActivity(intent)
        }
 
-/*       Btn_shift = findViewById(R.id.Btn_Go)
+
        Btn_shift.setOnClickListener{
            var intent = Intent(this, Login::class.java)
            startActivity(intent)
-       }*/
+       }
     }
 }
