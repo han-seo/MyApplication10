@@ -12,28 +12,34 @@ import android.widget.Button
 class HomeFragment : Fragment() {
 
     lateinit var b : Button
+    lateinit var c : Button
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         b = view.findViewById(R.id.go)
-        b.setOnClickListener{
+        c = view.findViewById(R.id.btn_start)
+
+        b.setOnClickListener {
             val intent = Intent(getActivity(), Home::class.java)
+            startActivity(intent)
+
+        }
+
+        c.setOnClickListener {
+            var intent = Intent(getActivity(), Login::class.java)
             startActivity(intent)
         }
     }
+        override fun onCreateView(
+                inflater: LayoutInflater, container: ViewGroup?,
+                savedInstanceState: Bundle?
+        ): View? {
+            // Inflate the layout for this fragment
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_home, container, false)
+            return inflater.inflate(R.layout.fragment_home, container, false)
+        }
     }
 
-
-
-
-
-}
