@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     //테스트용 버튼
     lateinit var Btn_Go : Button
     lateinit var Btn_shift : Button
+    lateinit var button3 :Button
 
    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,10 +23,17 @@ class MainActivity : AppCompatActivity() {
            startActivity(intent)
        }
 
-/*       Btn_shift = findViewById(R.id.Btn_Go)
+       Btn_shift = findViewById(R.id.Btn_shift)
        Btn_shift.setOnClickListener{
            var intent = Intent(this, Login::class.java)
            startActivity(intent)
-       }*/
+       }
+
+       button3 = findViewById(R.id.Btn_new)
+       button3.setOnClickListener{
+           val intent = Intent (this, newUpload::class.java)
+           startActivity(intent)
+       }
     }
+
 }

@@ -17,26 +17,24 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        Button1 =  findViewById<Button>(R.id.btn_search)
-        Button2 =  findViewById<Button>(R.id.btn_join)
-        Button3 =  findViewById<Button>(R.id.btn_join2)
+        Button1 = findViewById<Button>(R.id.btn_search)
+        Button2 = findViewById<Button>(R.id.btn_join)
+        Button3 = findViewById<Button>(R.id.btn_join2)
 
-        Button1.setOnClickListener{
+        Button1.setOnClickListener {
             val intent = Intent(this, IdpwSearch::class.java)
-            startActivity(intent) }
+            startActivity(intent)
+        }
 
-        Button2.setOnClickListener{
+        Button2.setOnClickListener {
             val intent = Intent(this, Join::class.java)
-            startActivity(intent) }
+            startActivity(intent)
+        }
 
-        Button3.setOnClickListener{
+        Button3.setOnClickListener {
             val intent = Intent(this, Join::class.java)
-            startActivity(intent) }
-
-
-        val intent = Intent(this, hair::class.java)
-        intent.putExtra("key1","문자열 전달쓰")
-        intent.putExtra("key2",2021)
+            startActivity(intent)
+        }
 
     }
 }
