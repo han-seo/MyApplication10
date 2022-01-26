@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".SearchView"></activity>
-        <activity android:name=".newUpload" />
+        <activity android:name=".newUpload"></activity>
         <activity android:name=".photo" />
         <activity android:name=".hair" />
         <activity android:name=".studio" />

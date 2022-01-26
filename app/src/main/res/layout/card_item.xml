@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".MyAdapter"
+    >
+
+    <!--김민혜 나의 활동 스크롤 갤러리와 관련한 코드입니다.-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="22dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bannerIv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cat"/>
+
+            <TextView
+                android:id="@+id/titleIv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="The Title"
+                android:textColor="#000"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/descriptionIv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:minLines="3"
+                android:text="The description"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/dateIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                android:background="@drawable/shape_rect"
+                android:drawableStart="@drawable/ic_time"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="dd/MM/yyyy"
+                android:drawableLeft="@drawable/ic_time"
+                android:textColor="#000"
+                android:textSize="12sp"
+                />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
