@@ -44,7 +44,6 @@ class hair : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?
 
-        /*
         //정보보이기기
         items.add(
             ListViewItem(
@@ -69,28 +68,28 @@ class hair : AppCompatActivity() {
         )
         items.add(
             ListViewItem(
-                ContextCompat.getDrawable(this, R.drawable.photo4)!!,
+                ContextCompat.getDrawable(this, R.drawable.photo2)!!,
                 "4번",
                 "4번 입니다"
             )
         )
         items.add(
             ListViewItem(
-                ContextCompat.getDrawable(this, R.drawable.photo5)!!,
+                ContextCompat.getDrawable(this, R.drawable.photo2)!!,
                 "5번",
                 "5번 입니다"
             )
         )
         items.add(
             ListViewItem(
-                ContextCompat.getDrawable(this, R.drawable.photo5)!!,
+                ContextCompat.getDrawable(this, R.drawable.photo2)!!,
                 "6번",
                 "6번 입니다"
             )
         )
         items.add(
             ListViewItem(
-                ContextCompat.getDrawable(this, R.drawable.photo5)!!,
+                ContextCompat.getDrawable(this, R.drawable.photo2)!!,
                 "7번",
                 "7번 입니다"
             )
@@ -122,7 +121,7 @@ class hair : AppCompatActivity() {
 
             builder.setCancelable(false)
             builder.show()
-        }*/
+        }
 
     }
 

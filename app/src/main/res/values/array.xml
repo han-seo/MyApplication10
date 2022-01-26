@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="itemList">
-        <item>선택안함</item>
-        <item>촛불</item>
-        <item>강낭콩</item>
-        <item>담쟁이</item>
+    <string-array name="my_array">
+        <item>아이템0</item>
+        <item>아이템1</item>
+        <item>아이템2</item>
+        <item>아이템3</item>
+        <item>아이템4</item>
     </string-array>
 </resources>

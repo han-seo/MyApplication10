@@ -21,8 +21,8 @@ class HomeFragment : Fragment() {
             val intent = Intent(getActivity(), Home::class.java)
             startActivity(intent)
         }
-    }
 
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,9 +31,4 @@ class HomeFragment : Fragment() {
 
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
-
-
-
-
-
 }
