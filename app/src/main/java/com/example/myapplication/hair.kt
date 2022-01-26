@@ -5,20 +5,21 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import android.view.inputmethod.InputMethodManager
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_hair.*
-import kotlinx.android.synthetic.main.list_item.*
-import kotlinx.android.synthetic.main.list_item.view.*
 
 
 class hair : AppCompatActivity() {
     lateinit var btn_Back2: Button
     lateinit var btn_ok2 :Button
+    lateinit var  ResultTextView:TextView
 
     var imm : InputMethodManager?= null
 
@@ -35,8 +36,20 @@ class hair : AppCompatActivity() {
             startActivity(intent)
         }
 
-        imm = getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as InputMethodManager?
+        imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?
         btn_ok2 = findViewById(R.id.btn_ok2)
+        ResultTextView = findViewById(R.id.ResultTextView)
+        var name = intent.getStringExtra("name")!!.toInt()
+/*
+        if (intent.hasExtra("nameKey")) {
+            textView.text = intent.getStringExtra("nameKey")
+            *//* "nameKey"라는 이름의 key에 저장된 값이 있다면
+               textView의 내용을 "nameKey" key에서 꺼내온 값으로 바꾼다 *//*
+
+        } else {
+            Toast.makeText(this, "전달된 이름이 없습니다", Toast.LENGTH_SHORT).show()
+        }*/
+
 
         //정보보이기기
         items.add(ListViewItem(ContextCompat.getDrawable(this, R.drawable.photo1)!!, "1번", "1번 입니다"))
@@ -58,12 +71,11 @@ class hair : AppCompatActivity() {
             builder.setMessage("${item.subTitle}")
             builder.setIcon(item.icon)
 
-            builder.setPositiveButton("예약하기",{
-                dialogInterface : DialogInterface?, i: Int -> //예약하기로 이동
+            builder.setPositiveButton("예약하기", { dialogInterface: DialogInterface?, i: Int -> //예약하기로 이동
             })
 
-            builder.setNegativeButton("취소",{
-                dialogInterface : DialogInterface?, i: Int ->  builder.setCancelable(true)
+            builder.setNegativeButton("취소", { dialogInterface: DialogInterface?, i: Int ->
+                builder.setCancelable(true)
             })
 
             builder.setCancelable(false)

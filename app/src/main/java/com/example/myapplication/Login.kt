@@ -34,7 +34,9 @@ class Login : AppCompatActivity() {
             startActivity(intent) }
 
 
-
+        val intent = Intent(this, hair::class.java)
+        intent.putExtra("key1","문자열 전달쓰")
+        intent.putExtra("key2",2021)
 
     }
 }

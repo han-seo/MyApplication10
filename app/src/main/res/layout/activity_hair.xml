@@ -9,8 +9,9 @@
 
     <ScrollView
         android:id="@+id/ScrollView1"
-        android:layout_width="416dp"
-        android:layout_height="644dp"
+        android:layout_width="410dp"
+        android:layout_height="640dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,12 +28,19 @@
             <ListView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="514dp"
+                android:layout_height="492dp"
                 android:layout_marginTop="150dp"
                 android:divider="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <TextView
+                    android:id="@+id/ResultTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </ListView>
 
         </LinearLayout>
     </ScrollView>
@@ -66,6 +74,18 @@
         app:layout_constraintVertical_bias="0.951"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
+    <EditText
+        android:id="@+id/editTextTextHair"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:hint="원하는 디자이너님의 이름을 입력하세요"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ok2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_Back2"
         android:layout_width="wrap_content"
@@ -98,17 +118,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="hideKeyboard"></Button>
-
-    <SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:visibility="visible"
-        app:iconifiedByDefault="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="검색어를 입력하시오" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".photo"></activity>
+        <activity android:name=".newPerson"></activity>
+        <activity android:name=".photo" />
         <activity android:name=".hair" />
         <activity android:name=".studio" />
         <activity android:name=".hmPage" />
@@ -21,9 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login"/>
-        <activity android:name=".IdpwSearch"/>
-        <activity android:name=".Join"/>
+        <activity android:name=".Login" />
+        <activity android:name=".IdpwSearch" />
+        <activity android:name=".Join" />
     </application>
 
 </manifest>

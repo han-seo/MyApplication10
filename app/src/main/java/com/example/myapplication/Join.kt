@@ -19,7 +19,6 @@ class Join : AppCompatActivity() {
             startActivity(intent)
         }
 
-
     }
 
 }
