@@ -44,6 +44,7 @@ class hair : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager?
 
+        /*
         //정보보이기기
         items.add(
             ListViewItem(
@@ -121,7 +122,7 @@ class hair : AppCompatActivity() {
 
             builder.setCancelable(false)
             builder.show()
-        }
+        }*/
 
     }
 

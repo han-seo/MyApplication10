@@ -18,7 +18,7 @@ class HomeFragment : Fragment() {
 
         b = view.findViewById(R.id.go)
         b.setOnClickListener{
-            val intent = Intent(getActivity(), TestFile::class.java)
+            val intent = Intent(getActivity(), Home::class.java)
             startActivity(intent)
         }
     }
