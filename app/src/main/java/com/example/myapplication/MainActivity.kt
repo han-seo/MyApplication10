@@ -8,15 +8,18 @@ import android.widget.Button
 class MainActivity : AppCompatActivity() {
 
     //테스트용 버튼
-    lateinit var Btn_Go : Button
-    lateinit var Btn_shift : Button
+    //lateinit var Btn_Go : Button
+    //lateinit var Btn_shift : Button
 
 
    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //잘되는지 테스트
+       supportActionBar?.hide()
+
+
+       /*
        Btn_Go = findViewById(R.id.Btn_Go)
        Btn_Go.setOnClickListener{
            var intent = Intent(this, category::class.java)
@@ -27,6 +30,6 @@ class MainActivity : AppCompatActivity() {
        Btn_shift.setOnClickListener{
            var intent = Intent(this, Login::class.java)
            startActivity(intent)
-       }
+       }*/
     }
 }
