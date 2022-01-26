@@ -130,7 +130,7 @@ class newUpload : AppCompatActivity() {
             }
         }
         else{
-            Log.d("ActivityResulit","메롱")
+            Log.d("ActivityResulit","")
 
         }
     }
