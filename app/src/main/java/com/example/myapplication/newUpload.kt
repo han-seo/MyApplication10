@@ -15,6 +15,7 @@ class newUpload : AppCompatActivity() {
         setContentView(R.layout.activity_new_upload)
 
             nameEditText =findViewById(R.id.nameEditText)
+            resultButton=findViewById(R.id.resultButton)
 
             resultButton.setOnClickListener{
                 saveData(nameEditText.text.toString().toInt())

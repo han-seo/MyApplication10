@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
            startActivity(intent)
        }
 
-
+       Btn_shift = findViewById(R.id.Btn_shift)
        Btn_shift.setOnClickListener{
            var intent = Intent(this, Login::class.java)
            startActivity(intent)
