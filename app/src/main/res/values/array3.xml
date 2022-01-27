@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pick_array">
+        <item>모델(사용자)</item>
+        <item>사진작가</item>
+        <item>스튜디오 자영업자</item>
+        <item>헤어 디자이너</item>
+        <item>메이크업 디자이너</item>
+    </string-array>
+
+</resources>

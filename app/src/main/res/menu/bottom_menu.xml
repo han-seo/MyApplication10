@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/menu_category"
+        :icon="@drawable/ic_baseline_favorite_24"
+        android:enabled="true"
+        android:icon="@drawable/menu"
+        android:title="category" />
+    <item
+        android:id="@+id/menu_love"
+        android:enabled="true"
+        android:icon="@drawable/love"
+        android:title="love" />
+    <item
+        android:id="@+id/menu_mypage"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="mypage" />
+
+</menu>
