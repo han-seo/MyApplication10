@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sns_array">
+        <item>인스타그램</item>
+        <item>블로그</item>
+        <item>유튜브</item>
+    </string-array>
+</resources>
