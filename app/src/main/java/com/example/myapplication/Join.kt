@@ -36,8 +36,8 @@ class Join : AppCompatActivity() {
         var intent_for_print: Intent = Intent(this, ConfirmMyInfo::class.java)
 
         intent_for_print.putExtra("key1", edit_id_value)
-        intent_for_print.putExtra("key1", edit_name_value)
-        intent_for_print.putExtra("key1", edit_sns1_value)
+        intent_for_print.putExtra("key2", edit_name_value)
+        intent_for_print.putExtra("key3", edit_sns1_value)
 
         startActivity(intent_for_print)
 
