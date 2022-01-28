@@ -9,9 +9,8 @@
         android:title="Home" />
     <item
         android:id="@+id/menu_category"
-        :icon="@drawable/ic_baseline_favorite_24"
+        android:icon="@drawable/love"
         android:enabled="true"
-        android:icon="@drawable/menu"
         android:title="category" />
     <item
         android:id="@+id/menu_love"

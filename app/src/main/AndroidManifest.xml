@@ -15,8 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Signup_Photo"></activity>
-        <!-- 이 부분은 김민혜 마이페이지에 필요하여 더하였습니다 -->
+        <activity android:name=".Reserve"></activity>
+        <activity android:name=".Signup_Photo" /> <!-- 이 부분은 김민혜 마이페이지에 필요하여 더하였습니다 -->
         <activity android:name=".MyPage" />
         <activity android:name=".EditAlbum" />
         <activity android:name=".CheckReservation" />

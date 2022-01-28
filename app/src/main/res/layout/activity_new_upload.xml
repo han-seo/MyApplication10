@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -32,7 +33,8 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="12dp" />
+                android:layout_marginTop="12dp"
+                android:spinnerMode="dropdown" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -111,7 +113,8 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:spinnerMode="dropdown" />
 
             <Button
                 android:id="@+id/resultButton"

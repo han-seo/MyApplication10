@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_hair.*
+import kotlinx.android.synthetic.main.activity_new_upload.*
 
 
 class hair : AppCompatActivity() {
@@ -37,7 +38,6 @@ class hair : AppCompatActivity() {
 
         //리스트 목록
         listview = findViewById<View>(R.id.listView) as ListView
-
 
 
         val items = mutableListOf<ListViewItem>()
@@ -94,6 +94,7 @@ class hair : AppCompatActivity() {
                 "7번 입니다"
             )
         )
+
 
         //adapter 생성 (data와 view를 연결해 주는 관리자)
         val adapter = ListViewAdapter(items)

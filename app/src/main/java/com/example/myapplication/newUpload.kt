@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.net.Uri
@@ -10,6 +11,7 @@ import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.*
+import androidx.core.view.get
 import kotlinx.android.synthetic.main.activity_new_upload.*
 import java.lang.Exception
 
@@ -17,6 +19,8 @@ class newUpload : AppCompatActivity() {
     lateinit var resultButton: Button
     lateinit var nameEditText: EditText
 
+    lateinit var spinner : Spinner
+    lateinit var spinner2 : Spinner
 
     //추가
     private val open_Gallery = 1
@@ -28,6 +32,9 @@ class newUpload : AppCompatActivity() {
 
         nameEditText = findViewById(R.id.nameEditText)
         resultButton = findViewById(R.id.resultButton)
+
+        val spinner: Spinner = findViewById(R.id.spinner)
+        val spinner2: Spinner = findViewById(R.id.spinner2)
 
 
         resultButton.setOnClickListener {
@@ -58,6 +65,7 @@ class newUpload : AppCompatActivity() {
                 id: Long
             ) {
 
+
                 //아이템이 클릭 되면 맨 위부터 position 0번부터 순서대로 동작하게 됩니다.
                 when (position) {
                     0 -> {
@@ -71,6 +79,7 @@ class newUpload : AppCompatActivity() {
 
                     }
                 }
+                spinner.onItemSelectedListener = this
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
@@ -78,17 +87,21 @@ class newUpload : AppCompatActivity() {
             }
         }
 
+
+
         //sns연동
         spinner2.adapter = myAdapter2
         spinner2.prompt = "sns를 선택해주세요."
 
         spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
             override fun onItemSelected(
                 parent: AdapterView<*>,
-                view: View,
+                view: View?,
                 position: Int,
                 id: Long
             ) {
+
 
                 //아이템이 클릭 되면 맨 위부터 position 0번부터 순서대로 동작하게 됩니다.
                 when (position) {
@@ -102,7 +115,9 @@ class newUpload : AppCompatActivity() {
                     else -> {
 
                     }
+
                 }
+                spinner2.onItemSelectedListener = this
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
