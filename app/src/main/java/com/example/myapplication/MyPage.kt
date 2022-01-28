@@ -358,7 +358,6 @@ class MyPage : AppCompatActivity() {
         val thatDay = intent.getStringExtra("thatDay")
 
 
-
         val resources: Resources = this.resources
         val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.cat)
 
@@ -366,15 +365,16 @@ class MyPage : AppCompatActivity() {
         if(title != null && content !=null && thatDay!=null)
         {
             Toast.makeText(this, "$title", Toast.LENGTH_SHORT).show()
+            //사진을 비트맵형식으로 받아온다.
             val byteArray = intent.getByteArrayExtra("image")
             val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
 
-            myModelList.add(
+            myModelList.add(//이것은 내가 직접 추가하는 사진첩의 코드이다.
                 MyModel(
                     "$title",
                     "$content",
                     "$thatDay",
-                    bitmap
+                    bitmap // 받는것도 drawable 속성이 아닌 비트맵으로 받도록 바꾸었다.
                 )
             )
         }

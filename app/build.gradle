@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'//김민혜 마이페이지에 필요하여 추가하였습니다.
+    id 'com.google.gms.google-services' //김민혜 파이어베이스에 필요하여 넣었습니다.
 }
 
 android {
@@ -14,6 +15,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -59,6 +61,18 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    /*김민혜 뷰페이저2에 필요하여 넣었습니다.*/
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    /*김민혜 온보딩 화면 애니메이션을 위해 넣었습니다.*/
+    implementation "com.airbnb.android:lottie:4.2.2"
+    /*김민혜 파이어 베이스를 위해 넣었습니다.*/
+    implementation platform('com.google.firebase:firebase-bom:29.0.4')
+    /*김민혜 파이어베이스 이메일 인증 라이브러리입니다.*/
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.android.gms:play-services-auth:20.0.1'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

@@ -12,6 +12,7 @@ import android.widget.Button
 class HomeFragment : Fragment() {
 
     lateinit var b : Button
+    lateinit var bb:Button
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -19,6 +20,12 @@ class HomeFragment : Fragment() {
         b = view.findViewById(R.id.go)
         b.setOnClickListener{
             val intent = Intent(getActivity(), Home::class.java)
+            startActivity(intent)
+        }
+
+        bb = view.findViewById(R.id.goLogin)
+        bb.setOnClickListener{
+            val intent = Intent(getActivity(), LoginTest::class.java)
             startActivity(intent)
         }
     }
