@@ -20,13 +20,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/Reserve_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="예약 가능한 시간"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
@@ -38,35 +39,39 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView26">
+        app:layout_constraintTop_toBottomOf="@+id/Reserve_tv">
 
         <Button
             android:id="@+id/Btn_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
-            android:text="09:00" />
+            android:text="09:00"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/Btn_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
-            android:text="11:00" />
+            android:text="11:00"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/Btn_13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
-            android:text="13:00" />
+            android:text="13:00"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/Btn_15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
-            android:text="15:00" />
+            android:text="15:00"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
@@ -85,23 +90,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
-            android:text="17:00" />
+            android:text="17:00"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/Btn_19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10px"
-            android:text="19:00" />
+            android:text="19:00"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/button23"
+        android:id="@+id/Btn_reserve"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:text="예약하기"
+        android:visibility="invisible"
         app:cornerRadius="@android:dimen/app_icon_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
