@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.screens.SecondScreen">
+    tools:context=".onboarding.screens.FristTwoScreen">
 
-    <!-- TODO: Update blank fragment layout -->
+
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/hair_animation"
-        android:layout_width="320dp"
-        android:layout_height="316dp"
+        android:id="@+id/camera_animation"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="instagram.json"
+        app:lottie_fileName="cameras.json"
         app:lottie_loop="true" />
 
     <TextView

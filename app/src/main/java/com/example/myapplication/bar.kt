@@ -8,6 +8,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class bar :AppCompatActivity() {
 
+    /*
+
     private val fl: FrameLayout by lazy {
         findViewById(R.id.fl_)
     }
@@ -25,7 +27,7 @@ class bar :AppCompatActivity() {
                 {
                     R.id.menu_home -> Home()
                     //  R.id.menu_love -> 찜하기()
-                    R.id.menu_category -> Home()
+                    //R.id.menu_category -> Home()
                     R.id.menu_mypage -> MyPage()
                     else -> newUpload()
                 }
@@ -36,6 +38,6 @@ class bar :AppCompatActivity() {
 
     private fun replaceFragment(fragment: AppCompatActivity) {
         supportFragmentManager.beginTransaction().replace(fl.id, Fragment() ).commit()
-    }
+    }*/
 }
 

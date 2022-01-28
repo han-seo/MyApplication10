@@ -6,16 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".onboarding.screens.FirstScreen">
 
-    <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        tools:layout_editor_absoluteX="-71dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/hair_animation"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="hair.json"
+        app:lottie_loop="true" />
 
+    <!--
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="446dp"
@@ -25,7 +29,21 @@
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.499" />-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/make_up_animation"
+        android:layout_width="243dp"
+        android:layout_height="234dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="makeup.json"
+        app:lottie_loop="true" />
 
     <TextView
         android:id="@+id/next"
@@ -33,9 +51,9 @@
         android:layout_height="wrap_content"
         android:text="Next"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.908" />

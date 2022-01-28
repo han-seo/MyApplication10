@@ -268,6 +268,11 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="302dp"
+            android:id="@+id/viewPager_ImageSlider"/>
+
 
     </LinearLayout>
 
