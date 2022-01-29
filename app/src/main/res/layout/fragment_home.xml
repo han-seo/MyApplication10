@@ -21,4 +21,11 @@
         android:layout_weight="1"
 
         android:text="로그인" />
+
+    <Button
+        android:id="@+id/mypageg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="마이페이지로 이동" />
 </LinearLayout>

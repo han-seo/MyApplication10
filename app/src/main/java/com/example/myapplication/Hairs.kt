@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.animation.ValueAnimator
 import android.content.Intent
 import android.content.res.Resources
 import android.graphics.BitmapFactory
@@ -17,13 +18,21 @@ import java.util.*
 import kotlin.collections.ArrayList
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
+import android.view.LayoutInflater
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView.Adapter
+import com.airbnb.lottie.LottieAnimationView
+import com.example.myapplication.databinding.ActivityAuthBinding
+import com.example.myapplication.databinding.ListItem2Binding
+import kotlinx.android.synthetic.main.list_item2.*
 
 class Hairs : AppCompatActivity() {
 
     lateinit var btn : Button
     val list = ArrayList<YoutubeItem>()
     val displayList = ArrayList<YoutubeItem>()
+    lateinit var like_btn : LottieAnimationView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +46,10 @@ class Hairs : AppCompatActivity() {
             val intent = Intent(this, EditList::class.java)
             startActivity(intent)
         }
+
+        ///
+        //좋아요 버튼 클릭 리스너
+
 
 
 

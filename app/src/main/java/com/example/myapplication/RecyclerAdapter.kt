@@ -1,14 +1,19 @@
 package com.example.myapplication
 
+import android.animation.ValueAnimator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
+import kotlinx.android.synthetic.main.list_item2.*
 import kotlinx.android.synthetic.main.list_item2.view.*
 
 class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
     RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+
+
 
     override fun getItemCount() = items.size
 
@@ -16,18 +21,35 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
         val item = items[position]
         val listener = View.OnClickListener {it ->
             Toast.makeText(it.context, "Clicked: ${item.title}", Toast.LENGTH_SHORT).show()
+
+
             //여기다 이제 페이지 이동하면된다.
         }
+
         holder.apply {
             bind(listener, item)
             itemView.tag = item
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             RecyclerAdapter.ViewHolder {
         val inflatedView = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item2, parent, false)
+
+        inflatedView.like_btn.setOnClickListener{
+            val animator = ValueAnimator.ofFloat(0f,0.5f).setDuration(1000)
+            animator.addUpdateListener { animation: ValueAnimator ->
+                inflatedView.like_btn.setProgress(
+                    animation.getAnimatedValue() as Float
+                )
+            }
+            animator.start()
+        }
+        //////////////////////
+
+
         return RecyclerAdapter.ViewHolder(inflatedView)
     }
 
@@ -41,5 +63,7 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
             view.content.text = item.content
             view.setOnClickListener(listener)
         }
+
+
     }
 }
