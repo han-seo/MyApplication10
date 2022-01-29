@@ -1,15 +1,22 @@
 package com.example.myapplication
 
+import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import kotlin.math.abs
+import android.util.Pair
+
 
 class Home: AppCompatActivity() {
 
@@ -20,6 +27,10 @@ class Home: AppCompatActivity() {
     lateinit var goMap : Button
     private lateinit var viewPager2: ViewPager2
     private val sliderHandler = Handler()
+    lateinit var mListLayout: RelativeLayout
+    lateinit var mProfileImage : ImageView
+    lateinit var mNameText : TextView
+    lateinit var mDescText : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,22 +44,22 @@ class Home: AppCompatActivity() {
 
         //각 카테고리 클릭릭
         hairs.setOnClickListener{
-            val intent = Intent(this, hair::class.java)
+            val intent = Intent(this, Hairs::class.java)
             startActivity(intent)
         }
 
         studios.setOnClickListener{
-            val intent = Intent(this, studio::class.java)
+            val intent = Intent(this, Studios::class.java)
             startActivity(intent)
         }
 
         models.setOnClickListener{
-            val intent = Intent(this, model::class.java)
+            val intent = Intent(this, Models::class.java)
             startActivity(intent)
         }
 
         cameraman.setOnClickListener{
-            val intent = Intent(this, photo::class.java)
+            val intent = Intent(this, Cameras::class.java)
             startActivity(intent)
         }
 
@@ -78,8 +89,7 @@ class Home: AppCompatActivity() {
 
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer(30))
-        compositePageTransformer.addTransformer{
-            page, position ->
+        compositePageTransformer.addTransformer{ page, position ->
             val r = 1- abs(position)
             page.scaleY = 0.85f +r * 0.25f
 
@@ -88,11 +98,33 @@ class Home: AppCompatActivity() {
         viewPager2.setPageTransformer(compositePageTransformer)
 
 
-        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 sliderHandler.removeCallbacks(sliderRunnable)
-                sliderHandler.postDelayed(sliderRunnable,3000)
+                sliderHandler.postDelayed(sliderRunnable, 3000)
+            }
+        })
+
+        //작가님 추천
+        mListLayout = findViewById(R.id.ListLayout)
+        mProfileImage = findViewById(R.id.profile_image)
+        mNameText = findViewById(R.id.profile_name)
+        mDescText =findViewById(R.id.profile_desc)
+
+        mListLayout.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+
+                val intent = Intent(this@Home, Writer::class.java)
+
+                val Pair1 = Pair.create<View,String>(mProfileImage,"imageTransition")
+                val Pair2 = Pair.create<View,String>(mNameText,"nameTransition")
+                val Pair3 = Pair.create<View,String>(mDescText,"descTransition")
+
+                var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(this@Home,Pair1,Pair2,Pair3)
+
+                startActivity(intent,options.toBundle())
+
             }
         })
 
@@ -106,12 +138,12 @@ class Home: AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        sliderHandler.postDelayed(sliderRunnable,1000)
+        sliderHandler.postDelayed(sliderRunnable, 1000)
 
     }
 
     override fun onResume() {
         super.onResume()
-        sliderHandler.postDelayed(sliderRunnable,1000)
+        sliderHandler.postDelayed(sliderRunnable, 1000)
     }
 }

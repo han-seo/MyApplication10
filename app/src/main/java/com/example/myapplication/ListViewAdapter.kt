@@ -8,6 +8,8 @@ import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class ListViewAdapter (private val items: MutableList<ListViewItem>): BaseAdapter() {
+
+
     override fun getCount(): Int = items.size
     override fun getItem(position: Int): ListViewItem = items[position]
     override fun getItemId(position: Int): Long = position.toLong()
