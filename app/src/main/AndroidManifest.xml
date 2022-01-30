@@ -40,6 +40,7 @@
         <activity android:name=".Cameras"/>
         <activity android:name=".Models"/>
         <activity android:name=".Writer"/>
+        <activity android:name=".HairOne"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA5jlW0hV9MjiL_kfKp8ZGqXCW4TVa-Qzc" /> <!-- 이 부분은 김민혜 마이페이지에 필요하여 더하였습니다 -->
