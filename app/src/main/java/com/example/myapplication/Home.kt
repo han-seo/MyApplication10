@@ -31,6 +31,12 @@ class Home: AppCompatActivity() {
     lateinit var mProfileImage : ImageView
     lateinit var mNameText : TextView
     lateinit var mDescText : TextView
+    //
+    lateinit var button_1 : Button
+    lateinit var button_2 : Button
+    lateinit var button_3 : Button
+    lateinit var button_4 : Button
+    //
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,12 +79,166 @@ class Home: AppCompatActivity() {
         viewPager2 = findViewById(R.id.viewPager_ImageSlider)
 
         val sliderItems: MutableList<SliderItem> = ArrayList()
+
         sliderItems.add(SliderItem(R.drawable.cat))
-        sliderItems.add(SliderItem(R.drawable.hello))
-        sliderItems.add(SliderItem(R.drawable.hello2))
-        sliderItems.add(SliderItem(R.drawable.hello3))
         sliderItems.add(SliderItem(R.drawable.cat))
-        sliderItems.add(SliderItem(R.drawable.hello))
+        sliderItems.add(SliderItem(R.drawable.cat))
+        sliderItems.add(SliderItem(R.drawable.cat))
+        sliderItems.add(SliderItem(R.drawable.cat))
+
+        //클릭되는 버튼의 종류에 따라 보여지는 사진의 종류가 달라지도록 한다.
+        button_1 = findViewById(R.id.button_1)
+        button_2 = findViewById(R.id.button_2)
+        button_3 = findViewById(R.id.button_3)
+        button_4 = findViewById(R.id.button_4)
+
+        button_1.setOnClickListener{
+            val sliderItems: MutableList<SliderItem> = ArrayList()
+            sliderItems.add(SliderItem(R.drawable.cat))
+            sliderItems.add(SliderItem(R.drawable.cat))
+            sliderItems.add(SliderItem(R.drawable.cat))
+            sliderItems.add(SliderItem(R.drawable.cat))
+            sliderItems.add(SliderItem(R.drawable.cat))
+            sliderItems.add(SliderItem(R.drawable.cat))
+
+            viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
+
+            viewPager2.clipToPadding = false
+            viewPager2.clipChildren = false
+            viewPager2.offscreenPageLimit = 3
+            viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+
+            val compositePageTransformer = CompositePageTransformer()
+            compositePageTransformer.addTransformer(MarginPageTransformer(30))
+            compositePageTransformer.addTransformer{ page, position ->
+                val r = 1- abs(position)
+                page.scaleY = 0.85f +r * 0.25f
+
+            }
+
+            viewPager2.setPageTransformer(compositePageTransformer)
+
+
+            viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    sliderHandler.removeCallbacks(sliderRunnable)
+                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                }
+            })
+        }
+
+
+        button_2.setOnClickListener{
+            val sliderItems: MutableList<SliderItem> = ArrayList()
+            sliderItems.add(SliderItem(R.drawable.hello))
+            sliderItems.add(SliderItem(R.drawable.hello))
+            sliderItems.add(SliderItem(R.drawable.hello))
+            sliderItems.add(SliderItem(R.drawable.hello))
+            sliderItems.add(SliderItem(R.drawable.hello))
+            sliderItems.add(SliderItem(R.drawable.hello))
+
+            viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
+
+            viewPager2.clipToPadding = false
+            viewPager2.clipChildren = false
+            viewPager2.offscreenPageLimit = 3
+            viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+
+            val compositePageTransformer = CompositePageTransformer()
+            compositePageTransformer.addTransformer(MarginPageTransformer(30))
+            compositePageTransformer.addTransformer{ page, position ->
+                val r = 1- abs(position)
+                page.scaleY = 0.85f +r * 0.25f
+
+            }
+
+            viewPager2.setPageTransformer(compositePageTransformer)
+
+
+            viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    sliderHandler.removeCallbacks(sliderRunnable)
+                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                }
+            })
+        }
+
+
+        button_3.setOnClickListener{
+            val sliderItems: MutableList<SliderItem> = ArrayList()
+            sliderItems.add(SliderItem(R.drawable.hello2))
+            sliderItems.add(SliderItem(R.drawable.hello2))
+            sliderItems.add(SliderItem(R.drawable.hello2))
+            sliderItems.add(SliderItem(R.drawable.hello2))
+            sliderItems.add(SliderItem(R.drawable.hello2))
+            sliderItems.add(SliderItem(R.drawable.hello2))
+
+            viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
+
+            viewPager2.clipToPadding = false
+            viewPager2.clipChildren = false
+            viewPager2.offscreenPageLimit = 3
+            viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+
+            val compositePageTransformer = CompositePageTransformer()
+            compositePageTransformer.addTransformer(MarginPageTransformer(30))
+            compositePageTransformer.addTransformer{ page, position ->
+                val r = 1- abs(position)
+                page.scaleY = 0.85f +r * 0.25f
+
+            }
+
+            viewPager2.setPageTransformer(compositePageTransformer)
+
+
+            viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    sliderHandler.removeCallbacks(sliderRunnable)
+                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                }
+            })
+        }
+
+
+        button_4.setOnClickListener{
+            val sliderItems: MutableList<SliderItem> = ArrayList()
+            sliderItems.add(SliderItem(R.drawable.hello3))
+            sliderItems.add(SliderItem(R.drawable.hello3))
+            sliderItems.add(SliderItem(R.drawable.hello3))
+            sliderItems.add(SliderItem(R.drawable.hello3))
+            sliderItems.add(SliderItem(R.drawable.hello3))
+            sliderItems.add(SliderItem(R.drawable.hello3))
+
+            viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
+
+            viewPager2.clipToPadding = false
+            viewPager2.clipChildren = false
+            viewPager2.offscreenPageLimit = 3
+            viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+
+            val compositePageTransformer = CompositePageTransformer()
+            compositePageTransformer.addTransformer(MarginPageTransformer(30))
+            compositePageTransformer.addTransformer{ page, position ->
+                val r = 1- abs(position)
+                page.scaleY = 0.85f +r * 0.25f
+
+            }
+
+            viewPager2.setPageTransformer(compositePageTransformer)
+
+
+            viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    sliderHandler.removeCallbacks(sliderRunnable)
+                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                }
+            })
+        }
+
 
         viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
 

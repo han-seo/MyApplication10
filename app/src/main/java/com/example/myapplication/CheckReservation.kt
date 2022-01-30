@@ -1,6 +1,9 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.content.res.Resources
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import kotlinx.android.synthetic.main.hair_one.*
 
 class CheckReservation: AppCompatActivity() {
     private val swipeRefreshLayout : SwipeRefreshLayout by lazy {
@@ -27,9 +31,22 @@ class CheckReservation: AppCompatActivity() {
 
         swipeRefreshLayout.setOnRefreshListener {
             swipeRefreshLayout.isRefreshing = false
-            val list = mutableListOf<Int>()
-            for ( i in 0 until 50){
-                list.add(i)
+
+            ///내가 바꾼부분///
+            val list = mutableListOf<String>()
+            //val resources: Resources = this.resources
+            //val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
+
+
+            ///내가 바꾼부분///
+            list.add("하쿠 작가님")
+            list.add("뽀로로 작가님")
+            list.add("마루밑 아리에티 작가님")
+
+            //받은정보를추가시키기
+            var title = intent.getStringExtra("title_hey")
+            if(title!=null){
+                list.add(title)
             }
 
             adapter.reload(list)
@@ -38,9 +55,16 @@ class CheckReservation: AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
 
-        val list = mutableListOf<Int>()
-        for(i in 0 until 50) {
-            list.add(i)
+        ///내가 바꾼부분///
+        val list = mutableListOf<String>()
+        list.add("하쿠 작가님")
+        list.add("뽀로로 작가님")
+        list.add("마루밑 아리에티 작가님")
+
+        //받은정보를추가시키기
+        var title = intent.getStringExtra("title_hey")
+        if(title!=null){
+            list.add(title)
         }
 
         adapter.reload(list)

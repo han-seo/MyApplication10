@@ -146,8 +146,11 @@ class MyPage : AppCompatActivity() {
 
 
         ////시험용, 수정 필요///
+        //
+        //
         button4 = findViewById(R.id.button4)
         button4.setOnClickListener{
+
 
             val stream = ByteArrayOutputStream()
             val bitmap2 = (userImageView.getDrawable() as BitmapDrawable).bitmap

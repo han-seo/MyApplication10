@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.animation.ValueAnimator
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.hair_one.*
+import kotlinx.android.synthetic.main.list_item2.view.*
 import java.io.ByteArrayOutputStream
 
 class HairOne:AppCompatActivity() {
@@ -47,8 +49,28 @@ class HairOne:AppCompatActivity() {
             intent.putExtra("image_hey", byteArray)
             startActivity(intent)
         }*/
+
+
+        //애니메이션으로 좋아요 표시하기
+        like_btns.setOnClickListener{
+            val animator = ValueAnimator.ofFloat(0f,0.5f).setDuration(1000)
+            animator.addUpdateListener { animation: ValueAnimator ->
+                like_btns.setProgress(
+                    animation.getAnimatedValue() as Float
+                )
+            }
+            animator.start()
+        }
+
         //예약 하기페이지는 CheckReservation 액티비티이다. 거기서 포문을 지우고, 이hairone엑티비티에서 받아온
         //정보를 거기에 add문으로 더할것이다.
+        //필요한 정보를 보낸다.
+        hey.setOnClickListener{
+            var intent = Intent(this, CheckReservation::class.java)
+            intent.putExtra("title_hey",tv_name.text.toString())
+            startActivity(intent)
+        }
+
 
     }
 }
