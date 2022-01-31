@@ -35,11 +35,11 @@ class category : AppCompatActivity() {
             var intent=Intent(this, hair::class.java)
             startActivity(intent)
         }
-
+/*
         Button3.setOnClickListener{
             var intent=Intent(this, model::class.java)
             startActivity(intent)
-        }
+        }*/
 
         Button4.setOnClickListener{
             var intent=Intent(this, photo::class.java)

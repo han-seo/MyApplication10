@@ -15,6 +15,7 @@ class HomeFragment : Fragment() {
     lateinit var b : Button
     lateinit var bb:Button
     lateinit var bbb:Button
+    lateinit var bbbb:Button
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -34,6 +35,12 @@ class HomeFragment : Fragment() {
         bbb = view.findViewById(R.id.mypageg)
         bbb.setOnClickListener{
             val intent = Intent(getActivity(), MyPage::class.java)
+            startActivity(intent)
+        }
+
+        bbbb = view.findViewById(R.id.loveit)
+        bbbb.setOnClickListener{
+            val intent = Intent(getActivity(), LoveIt::class.java)
             startActivity(intent)
         }
 

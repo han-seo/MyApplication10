@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:orientation="vertical">
 
 
     <Button
@@ -28,4 +29,11 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="마이페이지로 이동" />
+
+    <Button
+        android:id="@+id/loveit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="찜하기로 이동" />
 </LinearLayout>

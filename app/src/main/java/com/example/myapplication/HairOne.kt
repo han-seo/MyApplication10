@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -14,6 +15,8 @@ import kotlinx.android.synthetic.main.list_item2.view.*
 import java.io.ByteArrayOutputStream
 
 class HairOne:AppCompatActivity() {
+
+    lateinit var back : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,6 +71,16 @@ class HairOne:AppCompatActivity() {
         hey.setOnClickListener{
             var intent = Intent(this, CheckReservation::class.java)
             intent.putExtra("title_hey",tv_name.text.toString())
+            startActivity(intent)
+        }
+
+        //작가님 찜하기
+        back = findViewById(R.id.back)
+        back.setOnClickListener{
+            val intent = Intent(this,LoveIt::class.java)
+            intent.putExtra("HisName",tv_name.text.toString())
+            intent.putExtra("HisPhone",tv_phone.text.toString())
+
             startActivity(intent)
         }
 
