@@ -57,8 +57,8 @@ class LoveIt : AppCompatActivity() {
 
     private fun addInfo() {
 
-        val content = intent.getStringExtra("HisName")
-        val thatDay = intent.getStringExtra("HisPhone")
+        var content = intent.getStringExtra("HisName")
+        var thatDay = intent.getStringExtra("HisPhone")
 
         if(content != null && thatDay !=null)
         {
@@ -67,6 +67,8 @@ class LoveIt : AppCompatActivity() {
             userList.add(UserData("Name: $names","Mobile No. : $number"))
             userAdapter.notifyDataSetChanged()
             //다시 내용 초기화
+            content = null
+            thatDay = null
 
         }
     }
@@ -101,4 +103,5 @@ class LoveIt : AppCompatActivity() {
         addDialog.show()
     }
     /**ok now run this */
+
 }

@@ -23,8 +23,12 @@ class HairOne:AppCompatActivity() {
         setContentView(R.layout.hair_one)
 
         var title = intent.getStringExtra("data1")
+        var content = intent.getStringExtra("data3")
+        var how = intent.getStringExtra("data4")
         tv_name.text = title
-        if(title !=null)
+        tv_phone.text = content
+        how_manys.text = how
+        if(title !=null && content !=null)
         {
             Toast.makeText(this, "클릭되었습니다", Toast.LENGTH_SHORT).show()
             val byteArray = intent.getByteArrayExtra("data2")
@@ -54,8 +58,21 @@ class HairOne:AppCompatActivity() {
         }*/
 
 
+        var flag = true
         //애니메이션으로 좋아요 표시하기
         like_btns.setOnClickListener{
+
+            if(flag){
+                val up = Integer.parseInt(how_manys.text.toString()) +1
+                how_manys.setText(""+up)
+                flag = false
+            }else{
+                val up = Integer.parseInt(how_manys.text.toString()) -1
+                how_manys.setText(""+up)
+                flag = true
+            }
+
+
             val animator = ValueAnimator.ofFloat(0f,0.5f).setDuration(1000)
             animator.addUpdateListener { animation: ValueAnimator ->
                 like_btns.setProgress(

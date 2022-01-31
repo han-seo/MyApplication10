@@ -31,16 +31,16 @@ class Models : AppCompatActivity() {
         val resources: Resources = this.resources
         val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
 
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title01)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title02)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title03)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title04)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title05)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title06)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title07)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title08)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title09)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title10)))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title01),"212"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title02),"33"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title03),"56"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title04),"99"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title05),"872"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title06),"534"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title07),"23"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title08),"1"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title09),"56"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title10),"69"))
 
 
         btn = findViewById(R.id.btn)
@@ -60,7 +60,7 @@ class Models : AppCompatActivity() {
             Toast.makeText(this, "추가되었습니다", Toast.LENGTH_SHORT).show()
             val byteArray = intent.getByteArrayExtra("image")
             val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
-            list.add(YoutubeItem(bitmap!!, titles,content))
+            list.add(YoutubeItem(bitmap!!, titles,content,"0"))
         }
 
         displayList.addAll(list)

@@ -32,16 +32,16 @@ class Cameras : AppCompatActivity() {
         val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
 
 
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title01)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title02)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title03)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title04)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title05)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title06)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title07)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title08)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title09)))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title10)))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title01),"55"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title02),"99"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title03),"121"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title04),"455"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title05),"788"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title06),"90"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title07),"111"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title08),"579"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title09),"57"))
+        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title10),"98"))
 
 
 
@@ -62,7 +62,7 @@ class Cameras : AppCompatActivity() {
             val byteArray = intent.getByteArrayExtra("image")
             val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
 
-            list.add(YoutubeItem(bitmap!!, titles,content))
+            list.add(YoutubeItem(bitmap!!, titles,content,"0"))
         }
 
         displayList.addAll(list)

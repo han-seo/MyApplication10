@@ -52,9 +52,12 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
                 resize.compress(Bitmap.CompressFormat.JPEG, 100, stream)
                 val byteArray = stream.toByteArray()
 
+                //정보전달
                 val intent = Intent(v?.getContext(), HairOne::class.java)
                 intent.putExtra("data1",item.title)
+                intent.putExtra("data3",item.content)
                 intent.putExtra("data2",byteArray)
+                intent.putExtra("data4",item.heart)
                 v?.getContext()?.startActivity(intent)
             }
         })
@@ -66,7 +69,22 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
         val inflatedView = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item2, parent, false)
 
+        var my_heart = inflatedView.findViewById<TextView>(R.id.how_many)
+
         inflatedView.like_btn.setOnClickListener{
+
+            //여기서 개수도 늘려야 해
+            var flag = true
+            if(flag){
+                val up = Integer.parseInt(my_heart.text.toString()) +1
+                my_heart.setText(""+up)
+                flag = false
+            }else{
+                val up = Integer.parseInt(my_heart.text.toString()) -1
+                my_heart.setText(""+up)
+                flag = true
+            }
+
             val animator = ValueAnimator.ofFloat(0f,0.5f).setDuration(1000)
             animator.addUpdateListener { animation: ValueAnimator ->
                 inflatedView.like_btn.setProgress(
@@ -94,6 +112,7 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
             view.thumbnail.setImageBitmap(item.image)
             view.title.text = item.title
             view.content.text = item.content
+            view.how_many.text = item.heart.toString()
             view.setOnClickListener(listener)
 
             /*

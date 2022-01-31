@@ -31,16 +31,16 @@ class Studios : AppCompatActivity() {
         val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
 
 
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title01)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title02)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title03)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title04)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title05)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title06)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title07)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title08)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title09)))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title10)))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title01),"11"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title02),"34"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title03),"423"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title04),"56"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title05),"91"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title06),"156"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title07),"87"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title08),"776"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title09),"90"))
+        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title10),"5"))
 
 
 
@@ -60,7 +60,7 @@ class Studios : AppCompatActivity() {
             Toast.makeText(this, "추가되었습니다", Toast.LENGTH_SHORT).show()
             val byteArray = intent.getByteArrayExtra("image")
             val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
-            list.add(YoutubeItem(bitmap!!, titles,content))
+            list.add(YoutubeItem(bitmap!!, titles,content,"0"))
         }
 
         displayList.addAll(list)
