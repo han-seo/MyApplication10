@@ -25,9 +25,12 @@ class HairOne:AppCompatActivity() {
         var title = intent.getStringExtra("data1")
         var content = intent.getStringExtra("data3")
         var how = intent.getStringExtra("data4")
+        var news = intent.getStringExtra("news")
         tv_name.text = title
         tv_phone.text = content
         how_manys.text = how
+        my_news.text = news
+
         if(title !=null && content !=null)
         {
             Toast.makeText(this, "클릭되었습니다", Toast.LENGTH_SHORT).show()

@@ -12,4 +12,15 @@
     <string name="title08">Preferential Practices for Preferences (Android Dev Summit 18)</string>
     <string name="title09">That’s a wrap on Android Dev Summit 2018!</string>
     <string name="title10">Vitals: Past, Present and Future (Android Dev Summit 18)</string>
+
+    <string name="news_a">goback</string>
+    <string name="news_b">what</string>
+    <string name="news_c">why</string>
+    <string name="news_d">hey</string>
+    <string name="news_e">when</string>
+    <string name="news_f">see</string>
+    <string name="news_g">you</string>
+    <string name="news_h">again</string>
+    <string name="news_i">sorry</string>
+    <string name="news_j">thankyou</string>
 </resources>

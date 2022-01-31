@@ -40,8 +40,28 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
             itemView.tag = item
         }
 
+        //
+        lateinit var news : Array<String>
+
+        news = arrayOf(
+            "wht1",
+            "wht2",
+            "wht3",
+            "wht4",
+            "wht5",
+            "wht6",
+            "wht7",
+            "wht8",
+            "wht9",
+            "wht10"
+
+        )
+
+        //
         holder.itemView.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
+
+
 
                 val stream = ByteArrayOutputStream()
                 //val bitmap2 = (item.image.getDrawable() as BitmapDrawable).bitmap
@@ -58,6 +78,7 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
                 intent.putExtra("data3",item.content)
                 intent.putExtra("data2",byteArray)
                 intent.putExtra("data4",item.heart)
+                intent.putExtra("news",news[position])
                 v?.getContext()?.startActivity(intent)
             }
         })
@@ -98,6 +119,7 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
 
         return RecyclerAdapter.ViewHolder(inflatedView)
     }
+
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
 

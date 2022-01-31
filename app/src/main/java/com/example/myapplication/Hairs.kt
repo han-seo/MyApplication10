@@ -34,6 +34,7 @@ class Hairs : AppCompatActivity() {
     lateinit var like_btn : LottieAnimationView
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hairs)
@@ -49,6 +50,7 @@ class Hairs : AppCompatActivity() {
 
         ///
         //좋아요 버튼 클릭 리스너
+
 
 
 
