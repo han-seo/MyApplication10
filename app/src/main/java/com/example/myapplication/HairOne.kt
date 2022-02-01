@@ -6,14 +6,25 @@ import android.database.sqlite.SQLiteDatabase
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
+import android.provider.MediaStore
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.FileProvider
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.hair_one.*
 import kotlinx.android.synthetic.main.list_item2.view.*
+import kotlinx.android.synthetic.main.mypage_dialog.view.*
 import java.io.ByteArrayOutputStream
+import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HairOne:AppCompatActivity() {
 
@@ -21,8 +32,8 @@ class HairOne:AppCompatActivity() {
     //쓸데없이 40명이 넘는 사람에 대한 페이지를 모두 만들지 말고 약간 붕어빵 틀같은 느낌적인 느낌
     lateinit var back : Button
     /////
-    //lateinit var dbManager: DBManager
-    //lateinit var sqlitedb : SQLiteDatabase
+    lateinit var dbManager: DBManager2
+    lateinit var sqlitedb : SQLiteDatabase
 
     /////
 
@@ -40,7 +51,7 @@ class HairOne:AppCompatActivity() {
         my_news.text = news
 
         //
-        //dbManager = DBManager(this,"personnelDB",null,1)
+        dbManager = DBManager2(this,"personnelDB2",null,1)
         //
 
         if(title !=null && content !=null)
@@ -111,15 +122,43 @@ class HairOne:AppCompatActivity() {
         back.setOnClickListener{
 
             ////
-            //sqlitedb = dbManager.writableDatabase
-            //sqlitedb.execSQL("INSERT INTO personnel VALUES('"+tv_name+"','"+tv_phone+"');")
-            //sqlitedb.close()
+            sqlitedb = dbManager.writableDatabase
+            sqlitedb.execSQL("INSERT INTO personnel2 VALUES('"+title+"','"+content+"');")
+            sqlitedb.close()
             ////
             val intent = Intent(this,LoveIt::class.java)
             intent.putExtra("HisName",tv_name.text.toString())
             intent.putExtra("HisPhone",tv_phone.text.toString())
+            intent.putExtra("intent_name2",tv_name.text.toString())
 
-            startActivity(intent)
+            ///팝업을 띄워서 지금 갈지 나중에 갈지 물어보기///
+
+            val mDialogView = LayoutInflater.from(this).inflate(R.layout.loveit_dialog, null)
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(mDialogView)
+                .setTitle("찜하기 페이지로")
+
+            val mAlertDialog = mBuilder.show()
+            mDialogView.galleryButtons.setOnClickListener {
+
+                Toast.makeText(this, "지금 갑니다", Toast.LENGTH_SHORT).show()
+                ///
+                //gallery app........................
+                startActivity(intent)
+                mAlertDialog.dismiss()
+
+                ///
+            }
+
+            mDialogView.cameraButtons.setOnClickListener {
+                Toast.makeText(this, "나중에 갑니다", Toast.LENGTH_SHORT).show()
+                mAlertDialog.dismiss()
+            }
+
+            ///지금가기 누르면///
+            //startActivity(intent)
+            ///나중에 가기 물으면 페이지에 남아있기
+
         }
 
 
