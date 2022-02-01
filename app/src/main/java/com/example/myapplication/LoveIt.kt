@@ -27,8 +27,8 @@ class LoveIt : AppCompatActivity() {
     lateinit var go : Button
     //
     /////
-    lateinit var dbManager: DBManager
-    lateinit var sqlitedb : SQLiteDatabase
+    //lateinit var dbManager: DBManager
+    //lateinit var sqlitedb : SQLiteDatabase
 
     /////
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +47,7 @@ class LoveIt : AppCompatActivity() {
         /**set Dialog*/
 
         //
-        dbManager = DBManager(this,"personnelDB",null,1)
+        //dbManager = DBManager(this,"personnelDB",null,1)
         //
 
         //
@@ -73,17 +73,18 @@ class LoveIt : AppCompatActivity() {
         var thatDay = intent.getStringExtra("HisPhone")
 
         ////
-        sqlitedb = dbManager.readableDatabase
-        var cursor : Cursor
-        cursor = sqlitedb.rawQuery("SELECT * FROM personnel WHERE name = '"+content+"';",null)
+        //sqlitedb = dbManager.readableDatabase
+        //var cursor : Cursor
+        //cursor = sqlitedb.rawQuery("SELECT * FROM personnel WHERE name = '"+content+"';",null)
 
+        /*
         if(cursor.moveToNext()){
             thatDay = cursor.getString((cursor.getColumnIndex("tv_phone"))).toString()
         }
 
         cursor.close()
         sqlitedb.close()
-        dbManager.close()
+        dbManager.close()*/
 
 
         ///

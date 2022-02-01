@@ -21,8 +21,8 @@ class HairOne:AppCompatActivity() {
     //쓸데없이 40명이 넘는 사람에 대한 페이지를 모두 만들지 말고 약간 붕어빵 틀같은 느낌적인 느낌
     lateinit var back : Button
     /////
-    lateinit var dbManager: DBManager
-    lateinit var sqlitedb : SQLiteDatabase
+    //lateinit var dbManager: DBManager
+    //lateinit var sqlitedb : SQLiteDatabase
 
     /////
 
@@ -40,7 +40,7 @@ class HairOne:AppCompatActivity() {
         my_news.text = news
 
         //
-        dbManager = DBManager(this,"personnelDB",null,1)
+        //dbManager = DBManager(this,"personnelDB",null,1)
         //
 
         if(title !=null && content !=null)
@@ -111,9 +111,9 @@ class HairOne:AppCompatActivity() {
         back.setOnClickListener{
 
             ////
-            sqlitedb = dbManager.writableDatabase
-            sqlitedb.execSQL("INSERT INTO personnel VALUES('"+tv_name+"','"+tv_phone+"');")
-            sqlitedb.close()
+            //sqlitedb = dbManager.writableDatabase
+            //sqlitedb.execSQL("INSERT INTO personnel VALUES('"+tv_name+"','"+tv_phone+"');")
+            //sqlitedb.close()
             ////
             val intent = Intent(this,LoveIt::class.java)
             intent.putExtra("HisName",tv_name.text.toString())
