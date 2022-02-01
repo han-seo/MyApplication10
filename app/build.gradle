@@ -85,6 +85,9 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-storage:7.1.0'
     implementation "androidx.recyclerview:recyclerview:1.2.1"
     //kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    /*김민혜 드로어 레이아웃을 위해 넣었습니다.*/
+    implementation "androidx.drawerlayout:drawerlayout:1.1.1"
+    implementation "de.hdodenhof:circleimageview:3.1.0"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

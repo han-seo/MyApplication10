@@ -10,4 +10,5 @@
     <color name="black_radius">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="underLine">#DBD8D8</color>
 </resources>

@@ -23,4 +23,6 @@
     <string name="news_h">again</string>
     <string name="news_i">sorry</string>
     <string name="news_j">thankyou</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
