@@ -11,6 +11,7 @@ import com.google.android.material.navigation.NavigationView
 
 class Drawer:AppCompatActivity() {
 
+    //여기는 드로어에이블 연습코드입니다. 나중에 메인 홈으로 옮길게요.
     lateinit var toggle : ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {

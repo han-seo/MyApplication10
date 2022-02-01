@@ -20,6 +20,7 @@ import android.util.Pair
 
 class Home: AppCompatActivity() {
 
+    //메인 홈에 관련된 코드입니다.
     lateinit var hairs:Button
     lateinit var studios : Button
     lateinit var models: Button

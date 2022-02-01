@@ -2,6 +2,8 @@ package com.example.myapplication
 
 
 import android.content.Intent
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +18,7 @@ import com.example.myapplication.model.UserData
 import com.example.myapplication.view.UserAdapter
 
 class LoveIt : AppCompatActivity() {
+    //찜하기 관련 코드입니다.
     private lateinit var addsBtn:FloatingActionButton
     private lateinit var recv:RecyclerView
     private lateinit var userList:ArrayList<UserData>
@@ -23,6 +26,11 @@ class LoveIt : AppCompatActivity() {
     //
     lateinit var go : Button
     //
+    /////
+    lateinit var dbManager: DBManager
+    lateinit var sqlitedb : SQLiteDatabase
+
+    /////
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.love_it)
@@ -38,6 +46,9 @@ class LoveIt : AppCompatActivity() {
         recv.adapter = userAdapter
         /**set Dialog*/
 
+        //
+        dbManager = DBManager(this,"personnelDB",null,1)
+        //
 
         //
         //얘는 일단 찜해두기로
@@ -57,8 +68,25 @@ class LoveIt : AppCompatActivity() {
 
     private fun addInfo() {
 
+
         var content = intent.getStringExtra("HisName")
         var thatDay = intent.getStringExtra("HisPhone")
+
+        ////
+        sqlitedb = dbManager.readableDatabase
+        var cursor : Cursor
+        cursor = sqlitedb.rawQuery("SELECT * FROM personnel WHERE name = '"+content+"';",null)
+
+        if(cursor.moveToNext()){
+            thatDay = cursor.getString((cursor.getColumnIndex("tv_phone"))).toString()
+        }
+
+        cursor.close()
+        sqlitedb.close()
+        dbManager.close()
+
+
+        ///
 
         if(content != null && thatDay !=null)
         {
@@ -66,10 +94,6 @@ class LoveIt : AppCompatActivity() {
             val number = thatDay.toString()
             userList.add(UserData("Name: $names","Mobile No. : $number"))
             userAdapter.notifyDataSetChanged()
-            //다시 내용 초기화
-            content = null
-            thatDay = null
-
         }
     }
     /**ok now run this */

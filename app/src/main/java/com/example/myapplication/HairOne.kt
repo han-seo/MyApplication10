@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.animation.ValueAnimator
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -16,7 +17,14 @@ import java.io.ByteArrayOutputStream
 
 class HairOne:AppCompatActivity() {
 
+    //각각의 인물을 클릭하면 나오는 세부사항 페이지. 모든 인물이 공통적으로 이 페이지에서 값만 바꿔서 나오도록 할 것임
+    //쓸데없이 40명이 넘는 사람에 대한 페이지를 모두 만들지 말고 약간 붕어빵 틀같은 느낌적인 느낌
     lateinit var back : Button
+    /////
+    lateinit var dbManager: DBManager
+    lateinit var sqlitedb : SQLiteDatabase
+
+    /////
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +38,10 @@ class HairOne:AppCompatActivity() {
         tv_phone.text = content
         how_manys.text = how
         my_news.text = news
+
+        //
+        dbManager = DBManager(this,"personnelDB",null,1)
+        //
 
         if(title !=null && content !=null)
         {
@@ -97,6 +109,12 @@ class HairOne:AppCompatActivity() {
         //작가님 찜하기
         back = findViewById(R.id.back)
         back.setOnClickListener{
+
+            ////
+            sqlitedb = dbManager.writableDatabase
+            sqlitedb.execSQL("INSERT INTO personnel VALUES('"+tv_name+"','"+tv_phone+"');")
+            sqlitedb.close()
+            ////
             val intent = Intent(this,LoveIt::class.java)
             intent.putExtra("HisName",tv_name.text.toString())
             intent.putExtra("HisPhone",tv_phone.text.toString())

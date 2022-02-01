@@ -14,6 +14,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import kotlinx.android.synthetic.main.hair_one.*
 
 class CheckReservation: AppCompatActivity() {
+    //예약되었는지 확인하는 코드입니다.
     private val swipeRefreshLayout : SwipeRefreshLayout by lazy {
         findViewById(R.id.swipeRefreshLayout)
     }

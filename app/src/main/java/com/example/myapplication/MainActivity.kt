@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     //테스트용 버튼
     //lateinit var Btn_Go : Button
     //lateinit var Btn_shift : Button
+    //이곳은 건들지 마세요! 공공재의 공간입니다
 
 
    override fun onCreate(savedInstanceState: Bundle?) {
