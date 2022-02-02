@@ -362,7 +362,11 @@ class MyPage : AppCompatActivity() {
 
 
         val resources: Resources = this.resources
-        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.cat)
+        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.my_pic1)
+        val resources2: Resources = this.resources
+        val bitmap3 = BitmapFactory.decodeResource(resources, R.drawable.my_pic2)
+        val resources3: Resources = this.resources
+        val bitmap4 = BitmapFactory.decodeResource(resources, R.drawable.my_pic3)
 
 
         if(title != null && content !=null && thatDay!=null)
@@ -384,28 +388,28 @@ class MyPage : AppCompatActivity() {
         //add items/data to list
         myModelList.add(
             MyModel(
-                "제목1",
-                "내용1입니다. 과연 어떤 내용일까요 무슨말이라도 꺼내야 하는데 내용을 채워야 하는데",
-                "2022년 5월 8일",
+                "수지 2021년 보그 화보",
+                "세상에, 내가 수지의 화보촬영에 사진작가 보조로 참여하게 되다니, 믿을 수가 없다. 앞으로 이런 기회가 더 많았으면 좋겠다. 경험을 쌓는건 즐거운 일이다.",
+                "2021년 5월 8일",
                 bitmap2
             )
         )
 
         myModelList.add(
             MyModel(
-                "제목2",
-                "내용2입니다. 저는 어제 고기를 먹었어요 고기는 참 맛있지요",
-                "2022년 8월 9일",
-                bitmap2
+                "아린 2020년 화보",
+                "내가 직접 현장에 참여해보지는 못했지만 간접적으로 촬영에 도움을 주었던 화보촬영이다. 연예인의 화보를 찍는것도 좋지만 일반인들의 인스타그램 사진을 찍어주고 싶다.",
+                "2020년 8월 9일",
+                bitmap3
             )
         )
 
         myModelList.add(
             MyModel(
-                "제목3",
-                "내용 3입니다. 마이페이지는 여기에 있습니다. 마이페이지가 여기에 있다구요",
-                "2023년 8월 30일",
-                bitmap2
+                "강동원 2019년 화보",
+                "내가 메인 사진작가는 아니었지만, 보조로써 열심히 일을 했던 나의 첫 화보 이다. 픽킷에서 열심히 사람들과 예쁜 게시물을 만들다 보니 화보측과 연락이 닿았다.",
+                "2019년 8월 30일",
+                bitmap4
             )
         )
 
