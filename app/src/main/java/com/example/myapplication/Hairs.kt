@@ -35,6 +35,7 @@ class Hairs : AppCompatActivity() {
 
 
 
+    //카테고리 헤어/메이크업 관련 코드입니다.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hairs)
@@ -50,10 +51,7 @@ class Hairs : AppCompatActivity() {
 
         ///
         //좋아요 버튼 클릭 리스너
-
-
-
-
+        //여기서 작동안함 어댑터로 가서 고치기
 
     }
 
@@ -61,7 +59,7 @@ class Hairs : AppCompatActivity() {
 
         val resources: Resources = this.resources
         val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
-
+        //드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
         list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title01),"120"))
         list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title02),"231"))
         list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title03),"4"))
@@ -98,6 +96,7 @@ class Hairs : AppCompatActivity() {
     }
 
 
+    //내가 원하는 주제 가져오도록 서치 기능 더해봄, 틀리면 지워야됨
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         val menuItem = menu!!.findItem(R.id.search)

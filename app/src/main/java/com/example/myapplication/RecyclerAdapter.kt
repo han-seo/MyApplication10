@@ -30,7 +30,8 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
             Toast.makeText(it.context, "Clicked: ${item.title}", Toast.LENGTH_SHORT).show()
 
 
-            //여기다 이제 페이지 이동하면된다.
+            //여기서 데이터베이스 쌓으면 될 것같음
+
 
         }
 

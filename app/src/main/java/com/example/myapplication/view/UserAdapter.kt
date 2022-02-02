@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.model.UserData
 
+//찜하기 기능과 관련된 코드입니다.
 class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.Adapter<UserAdapter.UserViewHolder>()
 {
-
 
 
     inner class UserViewHolder(val v:View):RecyclerView.ViewHolder(v){
@@ -33,7 +33,7 @@ class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.A
             popupMenus.inflate(R.menu.show_menu)
             popupMenus.setOnMenuItemClickListener {
                 when(it.itemId){
-                    R.id.editText->{
+                    R.id.editText->{ //편집 기능.
                         val v = LayoutInflater.from(c).inflate(R.layout.add_item,null)
                         val name = v.findViewById<EditText>(R.id.userName)
                         val number = v.findViewById<EditText>(R.id.userNo)
@@ -58,7 +58,7 @@ class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.A
 
                         true
                     }
-                    R.id.delete->{
+                    R.id.delete->{ //기록해둔것을 지울것이다. 그전에 확인하고.
                         /**set delete*/
                         AlertDialog.Builder(c)
                             .setTitle("Delete")

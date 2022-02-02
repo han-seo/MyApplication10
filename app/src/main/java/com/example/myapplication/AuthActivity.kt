@@ -20,6 +20,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.GoogleAuthProvider
 
+//파이어베이스 로그인 관련 코드
 class AuthActivity : AppCompatActivity() {
     lateinit var binding: ActivityAuthBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +47,7 @@ class AuthActivity : AppCompatActivity() {
         }
 
         binding.googleLoginBtn.setOnClickListener {
-            //구글 로그인....................
+            //구글 로그인하기
             val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -78,13 +79,10 @@ class AuthActivity : AppCompatActivity() {
 
                     //받은 데이터 값을 저장하여야 함//
 
-
-                    //받은 데이터 값을 저장하여야 함//
                     //김민혜 추가 코드 실험//
 
                     if (task.isSuccessful) {
                         // 비밀번호는 최소 6자 이상
-                        //send email...
                         MyApplication.auth.currentUser?.sendEmailVerification()
                             ?.addOnCompleteListener { sendTask ->
                                 if(sendTask.isSuccessful){
@@ -166,7 +164,7 @@ class AuthActivity : AppCompatActivity() {
         }
 
         binding.loginBtn.setOnClickListener {
-            //이메일, 비밀번호 로그인.......................
+            //이메일, 비밀번호 로그인
             val email: String = binding.authEmailEditView.text.toString()
             val password: String = binding.authPasswordEditView.text.toString()
             //김민혜 추가 코드 실험//
@@ -186,11 +184,11 @@ class AuthActivity : AppCompatActivity() {
                     //김민혜 추가 코드 실험//
                     if (task.isSuccessful) {
                         if(MyApplication.checkAuth()){
-                            //로그인 성공 상황...........
+                            //로그인 성공 상황
                             MyApplication.email=email
                             changeVisibility("login")
                         }else {
-                            //발송된 메일로 인증 확인을 안한경우...........
+                            //발송된 메일로 인증 확인을 안한경우
                             Toast.makeText(baseContext, "전송된 메일로 이메일 인증이 되지 않았습니다.",
                                 Toast.LENGTH_SHORT).show()
                         }
@@ -208,7 +206,7 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        //구글 로그인 결과 처리...........................
+        //구글 로그인 결과 처리
         if(requestCode==10 ){
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
@@ -218,7 +216,7 @@ class AuthActivity : AppCompatActivity() {
                 MyApplication.auth.signInWithCredential(credential)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            //구글 로그인 성공..
+                            //구글 로그인 성공
                             MyApplication.email=account.email
                             changeVisibility("login")
                             //여기서 이제 카톡으로 가입 축하한다고 문제 메시지가 오는 것임
@@ -251,11 +249,11 @@ class AuthActivity : AppCompatActivity() {
                 googleLoginBtn.visibility= View.GONE
                 authEmailEditView.visibility= View.GONE
                 authPasswordEditView.visibility= View.GONE
-                authNameEditView.visibility = View.GONE
-                authIdEditView.visibility = View.GONE
-                authPhoneEditView.visibility = View.GONE
-                signBtn.visibility= View.GONE
-                loginBtn.visibility= View.GONE
+                authNameEditView.visibility = View.GONE //김민혜 변경 코드 틀리면 지우기
+                authIdEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
+                authPhoneEditView.visibility = View.GONE //김민혜 변경 코드 틀리면 지우기
+                signBtn.visibility= View.GONE//김민혜 변경 코드 틀리면 지우기
+                loginBtn.visibility= View.GONE//김민혜 변경 코드 틀리면 지우기
             }
 
         }else if(mode === "logout"){
@@ -266,11 +264,11 @@ class AuthActivity : AppCompatActivity() {
                 googleLoginBtn.visibility = View.VISIBLE
                 authEmailEditView.visibility = View.VISIBLE
                 authPasswordEditView.visibility = View.VISIBLE
-                authNameEditView.visibility = View.GONE
-                authIdEditView.visibility = View.GONE
-                authPhoneEditView.visibility = View.GONE
-                signBtn.visibility = View.GONE
-                loginBtn.visibility = View.VISIBLE
+                authNameEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
+                authIdEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
+                authPhoneEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
+                signBtn.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
+                loginBtn.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
                 startBtn.visibility = View.GONE
             }
         }else if(mode === "signin"){
@@ -279,11 +277,11 @@ class AuthActivity : AppCompatActivity() {
                 goSignInBtn.visibility = View.GONE
                 googleLoginBtn.visibility = View.GONE
                 authEmailEditView.visibility = View.VISIBLE
-                authPasswordEditView.visibility = View.VISIBLE
-                authNameEditView.visibility = View.VISIBLE
-                authIdEditView.visibility = View.VISIBLE
-                authPhoneEditView.visibility = View.VISIBLE
-                signBtn.visibility = View.VISIBLE
+                authPasswordEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
+                authNameEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
+                authIdEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
+                authPhoneEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
+                signBtn.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
                 loginBtn.visibility = View.GONE
                 startBtn.visibility = View.GONE
             }

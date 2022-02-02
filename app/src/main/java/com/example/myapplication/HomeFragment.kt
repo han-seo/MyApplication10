@@ -12,6 +12,7 @@ import android.widget.Toast
 
 class HomeFragment : Fragment() {
 
+    //메인 홈이 나타나기 전 코드입니다. 아마도 회원가입을 하지 않으셨군요! 하고 알려주는 페이지로 바뀔 듯 싶어요
     lateinit var b : Button
     lateinit var bb:Button
     lateinit var bbb:Button

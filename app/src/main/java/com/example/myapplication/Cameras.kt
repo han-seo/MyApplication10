@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 
 class Cameras : AppCompatActivity() {
 
+    //카테고리 사진작가 목록 보여주는 관련 코드입니다
     lateinit var btn : Button
     val list = ArrayList<YoutubeItem>()
     val displayList = ArrayList<YoutubeItem>()
@@ -28,8 +29,10 @@ class Cameras : AppCompatActivity() {
         setContentView(R.layout.studios)
 
 
+        //드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
         val resources: Resources = this.resources
         val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
+
 
 
         list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title01),"55"))
@@ -78,6 +81,7 @@ class Cameras : AppCompatActivity() {
 
     }
 
+    //내가 원하는 주제 가져오도록 서치 기능 더해봄, 틀리면 지워야됨
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         val menuItem = menu!!.findItem(R.id.search)

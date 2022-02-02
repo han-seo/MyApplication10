@@ -25,6 +25,10 @@
             android:enabled="true"
             android:exported="true" /> <!-- 이 부분은 김민혜 마이페이지에 필요하여 더하였습니다 -->
         <activity android:name=".MyPage" />
+        <activity android:name=".Students"/>
+        <activity android:name=".PersonnelInfo"/>
+        <activity android:name=".PersonnelList"/>
+        <activity android:name=".PersonnelReg"/>
         <activity android:name=".Drawer"/>
         <activity android:name=".EditAlbum" />
         <activity android:name=".CheckReservation" />
