@@ -16,6 +16,11 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import kotlin.math.abs
 import android.util.Pair
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.example.myapplication.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.bar.*
 
 
 class Home: AppCompatActivity() {
@@ -38,9 +43,16 @@ class Home: AppCompatActivity() {
     lateinit var button_4 : Button
     //
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
+
+        initBinding()
+        initNavigation()
 
         hairs = findViewById(R.id.hairs)
         studios = findViewById(R.id.studios)
@@ -305,5 +317,14 @@ class Home: AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         sliderHandler.postDelayed(sliderRunnable, 1000)
+    }
+
+    private fun initNavigation() {
+        NavigationUI.setupWithNavController(bn_, findNavController(R.id.fl_))
+    }
+
+    private fun initBinding() {
+        binding = DataBindingUtil.setContentView(this,R.layout.bar)
+       // binding.lifecycleOwner = this
     }
 }
