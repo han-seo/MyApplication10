@@ -5,10 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -16,31 +12,36 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import kotlin.math.abs
 import android.util.Pair
+import android.widget.*
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class Home: AppCompatActivity() {
 
-    lateinit var hairs:Button
-    lateinit var studios : Button
+    lateinit var hairs: Button
+    lateinit var studios: Button
     lateinit var models: Button
-    lateinit var cameraman : Button
-    lateinit var goMap : Button
+    lateinit var cameraman: Button
+    lateinit var goMap: Button
     private lateinit var viewPager2: ViewPager2
     private val sliderHandler = Handler()
     lateinit var mListLayout: RelativeLayout
-    lateinit var mProfileImage : ImageView
-    lateinit var mNameText : TextView
-    lateinit var mDescText : TextView
+    lateinit var mProfileImage: ImageView
+    lateinit var mNameText: TextView
+    lateinit var mDescText: TextView
+
     //
-    lateinit var button_1 : Button
-    lateinit var button_2 : Button
-    lateinit var button_3 : Button
-    lateinit var button_4 : Button
+    lateinit var button_1: Button
+    lateinit var button_2: Button
+    lateinit var button_3: Button
+    lateinit var button_4: Button
     //
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
+
 
         hairs = findViewById(R.id.hairs)
         studios = findViewById(R.id.studios)
@@ -49,28 +50,28 @@ class Home: AppCompatActivity() {
         goMap = findViewById(R.id.goMap)
 
         //각 카테고리 클릭릭
-        hairs.setOnClickListener{
+        hairs.setOnClickListener {
             val intent = Intent(this, Hairs::class.java)
             startActivity(intent)
         }
 
-        studios.setOnClickListener{
+        studios.setOnClickListener {
             val intent = Intent(this, Studios::class.java)
             startActivity(intent)
         }
 
-        models.setOnClickListener{
+        models.setOnClickListener {
             val intent = Intent(this, Models::class.java)
             startActivity(intent)
         }
 
-        cameraman.setOnClickListener{
+        cameraman.setOnClickListener {
             val intent = Intent(this, Cameras::class.java)
             startActivity(intent)
         }
 
         //구글지도
-        goMap.setOnClickListener{
+        goMap.setOnClickListener {
             val intent = Intent(this, EventMap::class.java)
             startActivity(intent)
         }
@@ -92,7 +93,7 @@ class Home: AppCompatActivity() {
         button_3 = findViewById(R.id.button_3)
         button_4 = findViewById(R.id.button_4)
 
-        button_1.setOnClickListener{
+        button_1.setOnClickListener {
             val sliderItems: MutableList<SliderItem> = ArrayList()
             sliderItems.add(SliderItem(R.drawable.cat))
             sliderItems.add(SliderItem(R.drawable.cat))
@@ -110,9 +111,9 @@ class Home: AppCompatActivity() {
 
             val compositePageTransformer = CompositePageTransformer()
             compositePageTransformer.addTransformer(MarginPageTransformer(30))
-            compositePageTransformer.addTransformer{ page, position ->
-                val r = 1- abs(position)
-                page.scaleY = 0.85f +r * 0.25f
+            compositePageTransformer.addTransformer { page, position ->
+                val r = 1 - abs(position)
+                page.scaleY = 0.85f + r * 0.25f
 
             }
 
@@ -129,7 +130,7 @@ class Home: AppCompatActivity() {
         }
 
 
-        button_2.setOnClickListener{
+        button_2.setOnClickListener {
             val sliderItems: MutableList<SliderItem> = ArrayList()
             sliderItems.add(SliderItem(R.drawable.hello))
             sliderItems.add(SliderItem(R.drawable.hello))
@@ -147,9 +148,9 @@ class Home: AppCompatActivity() {
 
             val compositePageTransformer = CompositePageTransformer()
             compositePageTransformer.addTransformer(MarginPageTransformer(30))
-            compositePageTransformer.addTransformer{ page, position ->
-                val r = 1- abs(position)
-                page.scaleY = 0.85f +r * 0.25f
+            compositePageTransformer.addTransformer { page, position ->
+                val r = 1 - abs(position)
+                page.scaleY = 0.85f + r * 0.25f
 
             }
 
@@ -166,7 +167,7 @@ class Home: AppCompatActivity() {
         }
 
 
-        button_3.setOnClickListener{
+        button_3.setOnClickListener {
             val sliderItems: MutableList<SliderItem> = ArrayList()
             sliderItems.add(SliderItem(R.drawable.hello2))
             sliderItems.add(SliderItem(R.drawable.hello2))
@@ -184,9 +185,9 @@ class Home: AppCompatActivity() {
 
             val compositePageTransformer = CompositePageTransformer()
             compositePageTransformer.addTransformer(MarginPageTransformer(30))
-            compositePageTransformer.addTransformer{ page, position ->
-                val r = 1- abs(position)
-                page.scaleY = 0.85f +r * 0.25f
+            compositePageTransformer.addTransformer { page, position ->
+                val r = 1 - abs(position)
+                page.scaleY = 0.85f + r * 0.25f
 
             }
 
@@ -203,7 +204,7 @@ class Home: AppCompatActivity() {
         }
 
 
-        button_4.setOnClickListener{
+        button_4.setOnClickListener {
             val sliderItems: MutableList<SliderItem> = ArrayList()
             sliderItems.add(SliderItem(R.drawable.hello3))
             sliderItems.add(SliderItem(R.drawable.hello3))
@@ -221,9 +222,9 @@ class Home: AppCompatActivity() {
 
             val compositePageTransformer = CompositePageTransformer()
             compositePageTransformer.addTransformer(MarginPageTransformer(30))
-            compositePageTransformer.addTransformer{ page, position ->
-                val r = 1- abs(position)
-                page.scaleY = 0.85f +r * 0.25f
+            compositePageTransformer.addTransformer { page, position ->
+                val r = 1 - abs(position)
+                page.scaleY = 0.85f + r * 0.25f
 
             }
 
@@ -249,9 +250,9 @@ class Home: AppCompatActivity() {
 
         val compositePageTransformer = CompositePageTransformer()
         compositePageTransformer.addTransformer(MarginPageTransformer(30))
-        compositePageTransformer.addTransformer{ page, position ->
-            val r = 1- abs(position)
-            page.scaleY = 0.85f +r * 0.25f
+        compositePageTransformer.addTransformer { page, position ->
+            val r = 1 - abs(position)
+            page.scaleY = 0.85f + r * 0.25f
 
         }
 
@@ -270,24 +271,23 @@ class Home: AppCompatActivity() {
         mListLayout = findViewById(R.id.ListLayout)
         mProfileImage = findViewById(R.id.profile_image)
         mNameText = findViewById(R.id.profile_name)
-        mDescText =findViewById(R.id.profile_desc)
+        mDescText = findViewById(R.id.profile_desc)
 
         mListLayout.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
                 val intent = Intent(this@Home, Writer::class.java)
 
-                val Pair1 = Pair.create<View,String>(mProfileImage,"imageTransition")
-                val Pair2 = Pair.create<View,String>(mNameText,"nameTransition")
-                val Pair3 = Pair.create<View,String>(mDescText,"descTransition")
+                val Pair1 = Pair.create<View, String>(mProfileImage, "imageTransition")
+                val Pair2 = Pair.create<View, String>(mNameText, "nameTransition")
+                val Pair3 = Pair.create<View, String>(mDescText, "descTransition")
 
-                var options : ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(this@Home,Pair1,Pair2,Pair3)
+                var options: ActivityOptions = ActivityOptions.makeSceneTransitionAnimation(this@Home, Pair1, Pair2, Pair3)
 
-                startActivity(intent,options.toBundle())
+                startActivity(intent, options.toBundle())
 
             }
         })
-
 
 
     }
@@ -306,4 +306,10 @@ class Home: AppCompatActivity() {
         super.onResume()
         sliderHandler.postDelayed(sliderRunnable, 1000)
     }
+
 }
+
+
+
+
+

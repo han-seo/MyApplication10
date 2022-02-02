@@ -15,7 +15,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_hair.*
 import kotlinx.android.synthetic.main.activity_new_upload.*
 
-
 class hair : AppCompatActivity() {
 
    lateinit var Btn_search : Button
@@ -27,6 +26,7 @@ class hair : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(com.example.myapplication.R.layout.activity_hair)
 
         Btn_search = findViewById(R.id.Btn_search)
