@@ -8,16 +8,26 @@
     android:orientation="vertical"
     tools:context=".Hairs">
 
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-condensed-light"
+        android:gravity="center"
+        android:text="Hair/MakeUP"
+        android:textColor="#121212"
+        android:textSize="30sp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="448dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="10dp"
         android:clipToPadding="false"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="2"
-        tools:listitem="@layout/list_item"
-        />
+        tools:listitem="@layout/list_item" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -27,7 +37,11 @@
             android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:background="@drawable/shape_home"
+            android:backgroundTint="#FFE1D7"
+            android:text="추가하기"
+            android:textColor="#070707"
+            app:cornerRadius="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

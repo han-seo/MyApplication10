@@ -50,10 +50,10 @@ class Home: AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
-
-        initBinding()
-        initNavigation()
-
+////
+        //initBinding()
+        //initNavigation()
+////
         hairs = findViewById(R.id.hairs)
         studios = findViewById(R.id.studios)
         models = findViewById(R.id.models)

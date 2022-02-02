@@ -25,24 +25,42 @@ class Models : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.studios)
+        setContentView(R.layout.models)
 
 
         //카테고리 모델 관련 코드입니다.
         val resources: Resources = this.resources
-        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
+        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.model1)
+        val resources2: Resources = this.resources
+        val bitmap3 = BitmapFactory.decodeResource(resources2, R.drawable.model2)
+        val resources3: Resources = this.resources
+        val bitmap4 = BitmapFactory.decodeResource(resources3, R.drawable.model3)
+        val resources4: Resources = this.resources
+        val bitmap5 = BitmapFactory.decodeResource(resources4, R.drawable.model5)
+        val resources5: Resources = this.resources
+        val bitmap6 = BitmapFactory.decodeResource(resources5, R.drawable.model6)
+        val resources6: Resources = this.resources
+        val bitmap7 = BitmapFactory.decodeResource(resources6, R.drawable.model1)
+        val resources7: Resources = this.resources
+        val bitmap8 = BitmapFactory.decodeResource(resources7, R.drawable.model2)
+        val resources8: Resources = this.resources
+        val bitmap9 = BitmapFactory.decodeResource(resources8, R.drawable.model3)
+        val resources9: Resources = this.resources
+        val bitmap10 = BitmapFactory.decodeResource(resources9, R.drawable.model5)
+        val resources10: Resources = this.resources
+        val bitmap11 = BitmapFactory.decodeResource(resources10, R.drawable.model6)
 
         ////드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title01),"212"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title02),"33"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title03),"56"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title04),"99"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title05),"872"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title06),"534"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title07),"23"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title08),"1"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title09),"56"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title10),"69"))
+        list.add(YoutubeItem(bitmap2!!,"지윤 모델", "헤어 / 메이크업 개인 모델입니다.","212"))
+        list.add(YoutubeItem(bitmap3!!,"도영 모델", "헤어 개인 모델입니다, 탈색 안합니다.","33"))
+        list.add(YoutubeItem(bitmap4!!,"구예영 모델", "아나운서 헤어를 받고 싶습니다.","56"))
+        list.add(YoutubeItem(bitmap5!!,"윤주희 모델", "인물 사진 /모델 프로필 개인 모델입니다","99"))
+        list.add(YoutubeItem(bitmap6!!,"이정화 모델", "웨딩 / 바디 프로필 전문 개인 모델입니다.","872"))
+        list.add(YoutubeItem(bitmap7!!,"한빛모델", "바디 프로필 스튜디오 개인 모델입니다.","534"))
+        list.add(YoutubeItem(bitmap8!!,"강동원 모델", "크리스마스 컨셉으로 사진을 찍고 싶습니다.","23"))
+        list.add(YoutubeItem(bitmap9!!,"제니 모델","호캉스 느낌으로 사진을 찍고 싶습니다.","1"))
+        list.add(YoutubeItem(bitmap10!!,"한서 모델","디즈니에 놀러온 사진을 찍고 싶습니다.","56"))
+        list.add(YoutubeItem(bitmap11!!,"아리에티 모델", "영화속 한장면을 재현해보고 싶어요!","69"))
 
 
         btn = findViewById(R.id.btn)

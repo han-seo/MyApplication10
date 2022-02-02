@@ -26,25 +26,43 @@ class Cameras : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.studios)
+        setContentView(R.layout.cameras)
 
 
         //드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
+
         val resources: Resources = this.resources
-        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
+        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.camera1)
+        val resources2: Resources = this.resources
+        val bitmap3 = BitmapFactory.decodeResource(resources2, R.drawable.camera2)
+        val resources3: Resources = this.resources
+        val bitmap4 = BitmapFactory.decodeResource(resources3, R.drawable.camera3)
+        val resources4: Resources = this.resources
+        val bitmap5 = BitmapFactory.decodeResource(resources4, R.drawable.camera4)
+        val resources5: Resources = this.resources
+        val bitmap6 = BitmapFactory.decodeResource(resources5, R.drawable.camera5)
+        val resources6: Resources = this.resources
+        val bitmap7 = BitmapFactory.decodeResource(resources6, R.drawable.camera6)
+        val resources7: Resources = this.resources
+        val bitmap8 = BitmapFactory.decodeResource(resources7, R.drawable.camera1)
+        val resources8: Resources = this.resources
+        val bitmap9 = BitmapFactory.decodeResource(resources8, R.drawable.camera2)
+        val resources9: Resources = this.resources
+        val bitmap10 = BitmapFactory.decodeResource(resources9, R.drawable.camera3)
+        val resources10: Resources = this.resources
+        val bitmap11 = BitmapFactory.decodeResource(resources10, R.drawable.camera4)
 
 
-
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title01),"55"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title02),"99"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title03),"121"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title04),"455"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title05),"788"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title06),"90"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title07),"111"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title08),"579"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title09),"57"))
-        list.add(YoutubeItem(bitmap2!!,"토토로", getString(R.string.title10),"98"))
+        list.add(YoutubeItem(bitmap2!!,"권수혁 사진작가","Photographer who captures memories.","55"))
+        list.add(YoutubeItem(bitmap3!!,"한수아 사진작가", "Photographer who brings out the mood.","99"))
+        list.add(YoutubeItem(bitmap4!!,"김상엽 사진작가", "A photographer who captures individuality.","121"))
+        list.add(YoutubeItem(bitmap5!!,"윤아엽 사진작가", "A photographer who shows his natural side.","455"))
+        list.add(YoutubeItem(bitmap6!!,"이봄 사진작가", "A photographer who captures warmth.","788"))
+        list.add(YoutubeItem(bitmap7!!,"오민재 사진작가", "The photographer who takes the best photos of my life.","90"))
+        list.add(YoutubeItem(bitmap8!!,"강동원 사진작가", "A writer who takes extreme sports photos well.","111"))
+        list.add(YoutubeItem(bitmap9!!,"한효주 사진작가", "A writer who takes good dessert pictures.","579"))
+        list.add(YoutubeItem(bitmap10!!,"이광수 사진작가", "A writer who takes good family photos.","57"))
+        list.add(YoutubeItem(bitmap11!!,"토르 사진작가", "A writer who takes good pictures with friends.","98"))
 
 
 

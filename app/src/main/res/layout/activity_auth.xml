@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -9,6 +10,12 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/authMainTextView"
@@ -21,7 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#FF0000"
+            android:drawableTop="@drawable/logout_b"
+            android:backgroundTint="#FFFFFF"
+            android:stateListAnimator="@null"
             android:text="로그아웃"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -32,8 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#FF0000"
             android:text="픽킷 시작하기"
+            android:drawableTop="@drawable/startp_b"
+            android:backgroundTint="#FFFFFF"
+            android:stateListAnimator="@null"
             android:onClick="startPickit"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -44,8 +55,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#FF0000"
+            android:drawableTop="@drawable/startm_b"
             android:text="회원가입"
+            android:backgroundTint="#FFFFFF"
+            android:stateListAnimator="@null"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -55,8 +68,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#FF0000"
+            android:drawableTop="@drawable/google_b"
             android:text="구글인증"
+            android:backgroundTint="#FFFFFF"
+            android:stateListAnimator="@null"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -116,8 +131,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#FF0000"
-            android:text="가입"
+            android:drawableTop="@drawable/together_b"
+            android:backgroundTint="#FFFFFF"
+            android:stateListAnimator="@null"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:visibility="gone" />
@@ -127,8 +143,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#FF0000"
-            android:text="로그인"
+            android:backgroundTint="#FFFFFF"
+            android:stateListAnimator="@null"
+            android:drawableTop="@drawable/login_b"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:visibility="gone" />

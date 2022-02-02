@@ -274,7 +274,7 @@ class AuthActivity : AppCompatActivity() {
         }else if(mode === "signin"){
             binding.run {
                 logoutBtn.visibility = View.GONE
-                goSignInBtn.visibility = View.GONE
+                goSignInBtn.visibility = View.GONE///////////////////////////////////////////////
                 googleLoginBtn.visibility = View.GONE
                 authEmailEditView.visibility = View.VISIBLE
                 authPasswordEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기

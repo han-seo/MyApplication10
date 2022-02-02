@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="quiz_lv1">
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+        <item>@drawable/s1</item>
+    </array>
+</resources>

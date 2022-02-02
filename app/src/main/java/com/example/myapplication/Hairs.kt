@@ -58,18 +58,37 @@ class Hairs : AppCompatActivity() {
     private fun loadCard(){
 
         val resources: Resources = this.resources
-        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
+        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.hair1)
+        val resources2: Resources = this.resources
+        val bitmap3 = BitmapFactory.decodeResource(resources2, R.drawable.hair2)
+        val resources3: Resources = this.resources
+        val bitmap4 = BitmapFactory.decodeResource(resources3, R.drawable.hair3)
+        val resources4: Resources = this.resources
+        val bitmap5 = BitmapFactory.decodeResource(resources4, R.drawable.hair4)
+        val resources5: Resources = this.resources
+        val bitmap6 = BitmapFactory.decodeResource(resources5, R.drawable.hair5)
+        val resources6: Resources = this.resources
+        val bitmap7 = BitmapFactory.decodeResource(resources6, R.drawable.hair6)
+        val resources7: Resources = this.resources
+        val bitmap8 = BitmapFactory.decodeResource(resources7, R.drawable.hair1)
+        val resources8: Resources = this.resources
+        val bitmap9 = BitmapFactory.decodeResource(resources8, R.drawable.hair2)
+        val resources9: Resources = this.resources
+        val bitmap10 = BitmapFactory.decodeResource(resources9, R.drawable.hair3)
+        val resources10: Resources = this.resources
+        val bitmap11 = BitmapFactory.decodeResource(resources10, R.drawable.hair4)
+
         //드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title01),"120"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title02),"231"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title03),"4"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title04),"45"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title05),"500"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title06),"128"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title07),"322"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title08),"78"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title09),"54"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title10),"111"))
+        list.add(YoutubeItem(bitmap2!!, "오뜨뀌뛰르 디자이너","모델과의 coummunication을 최우선으로 하겠습니다..","120"))
+        list.add(YoutubeItem(bitmap3!!, "혜림 디자이너","도자기광 피부표현, 또렷한 eye 메이크업에 자신있습니다! ","231"))
+        list.add(YoutubeItem(bitmap4!!, "현경금 디자이너","본연의 image를 살려, 예쁨을 더해주는 메이크업입니다.","4"))
+        list.add(YoutubeItem(bitmap5!!, "하니 디자이너","탄머리, 녹은머리, 탈색 리빌딩시술 master입니다.","45"))
+        list.add(YoutubeItem(bitmap6!!, "오성희 디자이너","트렌디한 감성추구 손상모 전문 beauty플래너 ","500"))
+        list.add(YoutubeItem(bitmap7!!, "김지영 디자이너","trendy한 감성으로 고객님의 니즈를 파악합니다.","128"))
+        list.add(YoutubeItem(bitmap8!!, "예원 디자이너","1:1 상담을 통해 원하시는 style 맞춤을 해드릴게요!","322"))
+        list.add(YoutubeItem(bitmap9!!, "둘리 디자이너","drama 로맨스는 별책부록, 스타트업 등을 맡았습니다!","78"))
+        list.add(YoutubeItem(bitmap10!!, "데이지 디자이너","한 끝 차이로 만들어내는 image making!","54"))
+        list.add(YoutubeItem(bitmap11!!, "토토로 디자이너","고객의 두상에 맞게 디자인 하겠습니다.fighting!","111"))
 
         val titles = intent.getStringExtra("nick")
         val content = intent.getStringExtra("hello")

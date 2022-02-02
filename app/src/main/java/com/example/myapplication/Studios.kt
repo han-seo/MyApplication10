@@ -29,20 +29,38 @@ class Studios : AppCompatActivity() {
         setContentView(R.layout.studios)
 
         val resources: Resources = this.resources
-        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.image01)
+        val bitmap2 = BitmapFactory.decodeResource(resources, R.drawable.s1)
+        val resources2: Resources = this.resources
+        val bitmap3 = BitmapFactory.decodeResource(resources2, R.drawable.s2)
+        val resources3: Resources = this.resources
+        val bitmap4 = BitmapFactory.decodeResource(resources3, R.drawable.s3)
+        val resources4: Resources = this.resources
+        val bitmap5 = BitmapFactory.decodeResource(resources4, R.drawable.s4)
+        val resources5: Resources = this.resources
+        val bitmap6 = BitmapFactory.decodeResource(resources5, R.drawable.s5)
+        val resources6: Resources = this.resources
+        val bitmap7 = BitmapFactory.decodeResource(resources6, R.drawable.s6)
+        val resources7: Resources = this.resources
+        val bitmap8 = BitmapFactory.decodeResource(resources7, R.drawable.s1)
+        val resources8: Resources = this.resources
+        val bitmap9 = BitmapFactory.decodeResource(resources8, R.drawable.s2)
+        val resources9: Resources = this.resources
+        val bitmap10 = BitmapFactory.decodeResource(resources9, R.drawable.s3)
+        val resources10: Resources = this.resources
+        val bitmap11 = BitmapFactory.decodeResource(resources10, R.drawable.s4)
 
 
         //드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title01),"11"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title02),"34"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title03),"423"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title04),"56"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title05),"91"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title06),"156"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title07),"87"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title08),"776"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title09),"90"))
-        list.add(YoutubeItem(bitmap2!!, "토토로",getString(R.string.title10),"5"))
+        list.add(YoutubeItem(bitmap2!!, "Lina 스튜디오","화이트 컨셉으로 이루어진 스튜디오","11"))
+        list.add(YoutubeItem(bitmap3!!, "Celebrity 스튜디오","자연스러운 사진 촬영을 추구하는 스튜디오","34"))
+        list.add(YoutubeItem(bitmap4!!, "Half 스튜디오","베이지 우드느낌의 따뜻한 감성의 스튜디오","423"))
+        list.add(YoutubeItem(bitmap5!!, "Photo 스튜디오","루프탑 촬영이 가능한 스튜디오","56"))
+        list.add(YoutubeItem(bitmap6!!, "Life 스튜디오","감각적인 느낌으로 인생사진 찍는 스튜디오","91"))
+        list.add(YoutubeItem(bitmap7!!, "MoodOnThe 스튜디오","유럽느낌이 물씬 나는 스튜디오","156"))
+        list.add(YoutubeItem(bitmap8!!, "Totoro 스튜디오","지브리 영화를 재현한 스튜디오","87"))
+        list.add(YoutubeItem(bitmap9!!, "Disney 스튜디오","디즈니 세상을 구현한 덕후 스튜디오","776"))
+        list.add(YoutubeItem(bitmap10!!, "Influencer 스튜디오","연예인이 찍는 화보같은 느낌의 스튜디오","90"))
+        list.add(YoutubeItem(bitmap11!!, "Pororo 스튜디오","아이들 전용 스튜디오","5"))
 
 
 

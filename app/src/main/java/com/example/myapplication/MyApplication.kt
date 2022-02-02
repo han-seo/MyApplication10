@@ -28,15 +28,15 @@ class MyApplication: MultiDexApplication() {
             }
         }
 
-        lateinit var db:FirebaseFirestore
-        lateinit var storage: FirebaseStorage
+        //lateinit var db:FirebaseFirestore
+        //lateinit var storage: FirebaseStorage
     }
 
     override fun onCreate() {
         super.onCreate()
         auth =  Firebase.auth
 
-        db = FirebaseFirestore.getInstance()
-        storage = Firebase.storage
+        //db = FirebaseFirestore.getInstance()
+        //storage = Firebase.storage
     }
 }
