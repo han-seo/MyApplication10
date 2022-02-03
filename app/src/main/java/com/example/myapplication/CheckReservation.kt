@@ -34,6 +34,10 @@ class CheckReservation: AppCompatActivity() {
         swipeRefreshLayout.setOnRefreshListener {
             swipeRefreshLayout.isRefreshing = false
 
+            //상단바 이름 바꾸기
+            getSupportActionBar()?.setTitle("작가님과 상담 예약하기");
+            //
+
             ///내가 바꾼부분///
             val list = mutableListOf<String>()
             //val resources: Resources = this.resources
@@ -41,9 +45,8 @@ class CheckReservation: AppCompatActivity() {
 
 
             ///내가 바꾼부분///
-            list.add("하쿠 작가님")
-            list.add("뽀로로 작가님")
-            list.add("마루밑 아리에티 작가님")
+            list.add("강산 작가님")
+            list.add("이현아 모델님")
 
             //받은정보를추가시키기
             var title = intent.getStringExtra("title_hey")
@@ -59,9 +62,8 @@ class CheckReservation: AppCompatActivity() {
 
         ///내가 바꾼부분///
         val list = mutableListOf<String>()
-        list.add("하쿠 작가님")
-        list.add("뽀로로 작가님")
-        list.add("마루밑 아리에티 작가님")
+        list.add("강산 작가님")
+        list.add("이현아 모델님")
 
         //받은정보를추가시키기
         var title = intent.getStringExtra("title_hey")

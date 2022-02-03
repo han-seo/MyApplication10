@@ -157,10 +157,6 @@ class LoveIt : AppCompatActivity() {
 
 
         ////올때마다 저장해두자.
-
-
-        /*
-        ////올때마다 저장해두자.
         str_name= intent.getStringExtra("intent_name2").toString()
         dbManager = DBManager2(this,"personnelDB2",null,1)
         sqlitedb = dbManager.readableDatabase
@@ -188,7 +184,7 @@ class LoveIt : AppCompatActivity() {
 
         userList.add(UserData("Name: $str_name","Mobile No. : $str_tel"))
         userAdapter.notifyDataSetChanged()
-*/
+
 
         ///2번째 시도
 

@@ -11,7 +11,7 @@ class ItemViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
     private lateinit var textView: TextView
     private lateinit var textViewDelete: TextView
 
-    var s = "헤이 작가님"
+    var s = "작가님"
 
     var onDeleteClick:((RecyclerView.ViewHolder)-> Unit)? = null
 
@@ -38,6 +38,6 @@ class ItemViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
 
     fun updateView() {
         view.get()?.scrollTo(0,0)
-        textView.text = "index $s"
+        textView.text = "$s"
     }
 }

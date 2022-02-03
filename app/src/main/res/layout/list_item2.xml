@@ -60,7 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="80dp"
-            android:textColor="#EA2D2D" />
+            android:textColor="#EA2D2D"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

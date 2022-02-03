@@ -90,7 +90,7 @@ class Hairs : AppCompatActivity() {
         val bitmap11 = BitmapFactory.decodeResource(resources10, R.drawable.hair4)
 
         //드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
-        list.add(YoutubeItem(bitmap2!!, "오뜨뀌뛰르 디자이너","모델과의 coummunication을 최우선으로 하겠습니다..","120"))
+        list.add(YoutubeItem(bitmap2!!, "오뜨 디자이너","모델과의 coummunication을 최우선으로 합니다.","120"))
         list.add(YoutubeItem(bitmap3!!, "혜림 디자이너","도자기광 피부표현, 또렷한 eye 메이크업에 자신있습니다! ","231"))
         list.add(YoutubeItem(bitmap4!!, "현경금 디자이너","본연의 image를 살려, 예쁨을 더해주는 메이크업입니다.","4"))
         list.add(YoutubeItem(bitmap5!!, "하니 디자이너","탄머리, 녹은머리, 탈색 리빌딩시술 master입니다.","45"))

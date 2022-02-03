@@ -199,9 +199,23 @@ class MyPage : AppCompatActivity() {
             when(it.itemId){
                 R.id.nav_home ->
                 {
-                    var intent = Intent(this,Home::class.java)
-                    startActivity(intent)
+                    ////추가코드
+                    val stream = ByteArrayOutputStream()
+                    val bitmap2 = (userImageView.getDrawable() as BitmapDrawable).bitmap
+                    val scale = (1024 / bitmap2.width.toFloat())
+                    val image_w = (bitmap2.width * scale).toInt()
+                    val image_h = (bitmap2.height * scale).toInt()
+                    val resize = Bitmap.createScaledBitmap(bitmap2, image_w, image_h, true)
+                    resize.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+                    val byteArray = stream.toByteArray()
 
+                    val intent = Intent(this, Home::class.java)
+                    //이거를 액티비티를 풀 받아서 필요한 액티비티에 모두 연결해 드린다.
+
+                    intent.putExtra("image", byteArray)
+
+                    startActivity(intent)
+                    ////추가코드
                 }
                 R.id.nav_hair ->
                 {

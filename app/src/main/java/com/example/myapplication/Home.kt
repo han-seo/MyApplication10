@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.app.ActivityOptions
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -46,6 +47,9 @@ class Home: AppCompatActivity() {
     ///드로워 바 틀리면 지우기
     lateinit var toggle : ActionBarDrawerToggle
     ///
+    //프로필 사진
+    lateinit var home_profile : ImageView
+    //
 
     private lateinit var binding: ActivityMainBinding
 
@@ -63,6 +67,19 @@ class Home: AppCompatActivity() {
         models = findViewById(R.id.models)
         cameraman = findViewById(R.id.cameraman)
         goMap = findViewById(R.id.goMap)
+
+        ////////
+        //이미지 받아오기
+
+
+        home_profile = findViewById(R.id.home_profile)
+
+        val byteArray = intent.getByteArrayExtra("image")
+        if(byteArray!=null){
+            val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+            home_profile.setImageBitmap(bitmap)
+        }
+        ///////
 
         //각 카테고리 클릭릭
         hairs.setOnClickListener{

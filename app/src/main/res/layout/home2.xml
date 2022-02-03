@@ -18,110 +18,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="107dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <!--
-                <Button
-                    android:id="@+id/go"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Button"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.949"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.971" />-->
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:id="@+id/myname"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="36dp"
-                            android:layout_marginTop="30dp"
-                            android:text="TextView"
-                            android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.04" />
-
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30dp"
-                            android:text="님"
-                            android:textSize="18sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.364"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.05" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/textView15"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="35dp"
-                        android:layout_marginTop="5dp"
-                        android:text="사진 찍기 좋은 날이죠?"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.149"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/myname"
-                        app:layout_constraintVertical_bias="0.015" />
-
-
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="75dp"
-                    android:layout_height="76dp"
-                    android:layout_marginStart="100dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="6dp"
-                    android:layout_marginBottom="581dp"
-                    app:cardCornerRadius="75dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.296">
-
-                    <ImageView
-                        android:id="@+id/home_profile"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/user_basic" />
-                </androidx.cardview.widget.CardView>
-
-
-            </LinearLayout>
-
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="wrap_content"
@@ -368,7 +264,7 @@
 
                 <LinearLayout
                     android:layout_width="377dp"
-                    android:layout_height="135dp"
+                    android:layout_height="130dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/class_background"
                     android:orientation="horizontal"
