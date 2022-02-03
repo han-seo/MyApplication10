@@ -48,7 +48,8 @@
         <activity android:name=".Writer"/>
         <activity android:name=".HairOne"/>
         <activity android:name=".AuthActivity"/>
-        <activity android:name="LoveIt"/>
+        <activity android:name=".LoveIt"/>
+        <activity android:name=".category"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA5jlW0hV9MjiL_kfKp8ZGqXCW4TVa-Qzc" />
@@ -60,7 +61,6 @@
         <activity android:name=".hair" />
         <activity android:name=".studio" />
         <activity android:name=".hmPage" />
-        <activity android:name=".category" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

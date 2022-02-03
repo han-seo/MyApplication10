@@ -8,13 +8,17 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.widget.*
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.example.myapplication.model.UserData
 import com.example.myapplication.view.UserAdapter
+import com.google.android.material.navigation.NavigationView
 
 class LoveIt : AppCompatActivity() {
     //찜하기 관련 코드입니다.
@@ -32,9 +36,17 @@ class LoveIt : AppCompatActivity() {
     lateinit var str_tel : String
     lateinit var layout : RecyclerView
     /////
+
+    ///드로워 바 틀리면 지우기
+    lateinit var toggle : ActionBarDrawerToggle
+    ///
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.love_it)
+
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("스크랩(찜하기)");
+        //
         /**set List*/
         userList = ArrayList()
         /**set find Id*/
@@ -65,6 +77,76 @@ class LoveIt : AppCompatActivity() {
         //추가하는 기능도 만들자
         addsBtn.setOnClickListener { addInfo2() }
 
+        //////////드로워 레이아웃 내용 틀리면 지우기////////
+
+
+        val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView : NavigationView = findViewById(R.id.nav_view)
+
+        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+
+            when(it.itemId){
+                R.id.nav_home ->
+                {
+                    var intent = Intent(this,Home::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_hair ->
+                {
+                    var intent = Intent(this,Hairs::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_studio ->
+                {
+                    var intent = Intent(this,Studios::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_model->
+                {
+                    var intent = Intent(this,Models::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_camera->
+                {
+                    var intent = Intent(this,Cameras::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_login ->
+                {
+                    var intent = Intent(this,LoginTest::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_mypage->
+                {
+                    var intent = Intent(this,MyPage::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_loveit ->
+                {
+                    var intent = Intent(this,LoveIt::class.java)
+                    startActivity(intent)
+
+                }
+
+            }
+
+            true
+        }
+//////////////드로워 레이아웃 내용 틀리면 지우기////////
+
     }
 
     private fun addInfo() {
@@ -77,6 +159,7 @@ class LoveIt : AppCompatActivity() {
         ////올때마다 저장해두자.
 
 
+        /*
         ////올때마다 저장해두자.
         str_name= intent.getStringExtra("intent_name2").toString()
         dbManager = DBManager2(this,"personnelDB2",null,1)
@@ -105,7 +188,7 @@ class LoveIt : AppCompatActivity() {
 
         userList.add(UserData("Name: $str_name","Mobile No. : $str_tel"))
         userAdapter.notifyDataSetChanged()
-
+*/
 
         ///2번째 시도
 
@@ -188,5 +271,15 @@ class LoveIt : AppCompatActivity() {
         addDialog.show()
     }
     /**ok now run this */
+
+    ////드로워 레이아웃 틀리면 지우기////
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    ////드로워 레이아웃 클리면 지우기////
 
 }

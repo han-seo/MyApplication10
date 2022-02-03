@@ -6,27 +6,33 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
-        android:title="Home"/>
+        android:title="메인홈"/>
 
-    <item
-        android:id="@+id/nav_message"
-        android:icon="@drawable/ic_message"
-        android:title="Message"/>
+    <item android:title="Category">
+        <menu>
 
-    <item
-        android:id="@+id/nav_sync"
-        android:icon="@drawable/ic_message"
-        android:title="Sync"/>
+            <item
+                android:id="@+id/nav_hair"
+                android:icon="@drawable/ic_hair"
+                android:title="헤어/메이크업"/>
 
-    <item
-        android:id="@+id/nav_trash"
-        android:icon="@drawable/ic_del"
-        android:title="Trash"/>
+            <item
+                android:id="@+id/nav_studio"
+                android:icon="@drawable/ic_studio"
+                android:title="스튜디오"/>
 
-    <item
-        android:id="@+id/settings"
-        android:icon="@drawable/ic_setting"
-        android:title="Settings"/>
+            <item
+                android:id="@+id/nav_model"
+                android:icon="@drawable/ic_model"
+                android:title="모델"/>
+
+            <item
+                android:id="@+id/nav_camera"
+                android:icon="@drawable/ic_camera"
+                android:title="사진작가"/>
+
+        </menu>
+    </item>
 
     <item android:title="Profile">
         <menu>
@@ -34,22 +40,22 @@
             <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_login"
-                android:title="Login"/>
+                android:title="로그인"/>
 
         </menu>
     </item>
 
-    <item android:title="Communicate">
+    <item android:title="My Information">
         <menu>
 
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_message"
-                android:title="Share"/>
+                android:id="@+id/nav_mypage"
+                android:icon="@drawable/ic_my"
+                android:title="마이페이지"/>
             <item
-                android:id="@+id/nav_rate_us"
-                android:icon="@drawable/ic_rate"
-                android:title="Rate Us"/>
+                android:id="@+id/nav_loveit"
+                android:icon="@drawable/ic_favorite"
+                android:title="스크랩(찜하기)"/>
 
         </menu>
     </item>

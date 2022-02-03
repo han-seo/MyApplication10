@@ -41,11 +41,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="드로워레이아웃 이동" />
-    <Button
-        android:id="@+id/bar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="하단바 이동" />
+        android:text="카테고리 이동" />
 </LinearLayout>

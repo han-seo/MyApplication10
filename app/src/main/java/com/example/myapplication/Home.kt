@@ -51,6 +51,9 @@ class Home: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("PicKit");
+        //
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
@@ -135,7 +138,7 @@ class Home: AppCompatActivity() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
                     sliderHandler.removeCallbacks(sliderRunnable)
-                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                    sliderHandler.postDelayed(sliderRunnable, 2000)
                 }
             })
         }
@@ -171,7 +174,7 @@ class Home: AppCompatActivity() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
                     sliderHandler.removeCallbacks(sliderRunnable)
-                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                    sliderHandler.postDelayed(sliderRunnable, 2000)
                 }
             })
         }
@@ -207,7 +210,7 @@ class Home: AppCompatActivity() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
                     sliderHandler.removeCallbacks(sliderRunnable)
-                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                    sliderHandler.postDelayed(sliderRunnable, 2000)
                 }
             })
         }
@@ -243,7 +246,7 @@ class Home: AppCompatActivity() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
                     sliderHandler.removeCallbacks(sliderRunnable)
-                    sliderHandler.postDelayed(sliderRunnable, 3000)
+                    sliderHandler.postDelayed(sliderRunnable, 2000)
                 }
             })
         }
@@ -271,7 +274,7 @@ class Home: AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 sliderHandler.removeCallbacks(sliderRunnable)
-                sliderHandler.postDelayed(sliderRunnable, 3000)
+                sliderHandler.postDelayed(sliderRunnable, 2000)
             }
         })
 
@@ -313,14 +316,54 @@ class Home: AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
 
             when(it.itemId){
-                R.id.nav_home -> Toast.makeText(applicationContext,"홈 누름", Toast.LENGTH_SHORT).show()
-                R.id.nav_message -> Toast.makeText(applicationContext,"메시지 누름", Toast.LENGTH_SHORT).show()
-                R.id.nav_sync -> Toast.makeText(applicationContext,"싱크 누름", Toast.LENGTH_SHORT).show()
-                R.id.nav_trash -> Toast.makeText(applicationContext,"삭제 누름", Toast.LENGTH_SHORT).show()
-                R.id.settings-> Toast.makeText(applicationContext,"세팅 누름", Toast.LENGTH_SHORT).show()
-                R.id.nav_login -> Toast.makeText(applicationContext,"로그인 누름", Toast.LENGTH_SHORT).show()
-                R.id.nav_share -> Toast.makeText(applicationContext,"나눔 누름", Toast.LENGTH_SHORT).show()
-                R.id.nav_rate_us -> Toast.makeText(applicationContext,"뭔지모르겠지만 누름", Toast.LENGTH_SHORT).show()
+                R.id.nav_home ->
+                {
+                    var intent = Intent(this,Home::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_hair ->
+                {
+                    var intent = Intent(this,Hairs::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_studio ->
+                {
+                    var intent = Intent(this,Studios::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_model->
+                {
+                    var intent = Intent(this,Models::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_camera->
+                {
+                    var intent = Intent(this,Cameras::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_login ->
+                {
+                    var intent = Intent(this,LoginTest::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_mypage->
+                {
+                    var intent = Intent(this,MyPage::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_loveit ->
+                {
+                    var intent = Intent(this,LoveIt::class.java)
+                    startActivity(intent)
+
+                }
 
             }
 

@@ -20,10 +20,13 @@ import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.view.LayoutInflater
 import android.widget.LinearLayout
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.airbnb.lottie.LottieAnimationView
 import com.example.myapplication.databinding.ActivityAuthBinding
 import com.example.myapplication.databinding.ListItem2Binding
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.list_item2.*
 
 class Hairs : AppCompatActivity() {
@@ -32,6 +35,10 @@ class Hairs : AppCompatActivity() {
     val list = ArrayList<YoutubeItem>()
     val displayList = ArrayList<YoutubeItem>()
     lateinit var like_btn : LottieAnimationView
+    ///드로워 바 틀리면 지우기
+    lateinit var toggle : ActionBarDrawerToggle
+    ///
+
 
 
 
@@ -39,6 +46,10 @@ class Hairs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hairs)
+
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("카테고리 헤어");
+        //
 
         loadCard()
 
@@ -112,6 +123,76 @@ class Hairs : AppCompatActivity() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
+        //////////드로워 레이아웃 내용 틀리면 지우기////////
+
+
+        val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView : NavigationView = findViewById(R.id.nav_view)
+
+        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+
+            when(it.itemId){
+                R.id.nav_home ->
+                {
+                    var intent = Intent(this,Home::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_hair ->
+                {
+                    var intent = Intent(this,Hairs::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_studio ->
+                {
+                    var intent = Intent(this,Studios::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_model->
+                {
+                    var intent = Intent(this,Models::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_camera->
+                {
+                    var intent = Intent(this,Cameras::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_login ->
+                {
+                    var intent = Intent(this,LoginTest::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_mypage->
+                {
+                    var intent = Intent(this,MyPage::class.java)
+                    startActivity(intent)
+
+                }
+                R.id.nav_loveit ->
+                {
+                    var intent = Intent(this,LoveIt::class.java)
+                    startActivity(intent)
+
+                }
+
+            }
+
+            true
+        }
+//////////////드로워 레이아웃 내용 틀리면 지우기////////
+
     }
 
 
@@ -157,7 +238,18 @@ class Hairs : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+    /*
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return super.onOptionsItemSelected(item)
+    }*/
+
+    ////드로워 레이아웃 틀리면 지우기////
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
+    ////드로워 레이아웃 클리면 지우기////
 }

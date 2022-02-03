@@ -16,6 +16,7 @@
         <TextView
             android:layout_width="60sp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nororegular"
             android:text = "성명"/>
         <TextView
             android:id="@+id/edtName"
@@ -29,6 +30,7 @@
         <TextView
             android:layout_width="60sp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nororegular"
             android:text = "성별"/>
 
         <TextView
@@ -44,6 +46,7 @@
         <TextView
             android:layout_width="60sp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nororegular"
             android:text = "나이"/>
         <TextView
             android:id="@+id/edtAge"
@@ -57,6 +60,7 @@
         <TextView
             android:layout_width="60sp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nororegular"
             android:text = "전화번호"/>
         <TextView
             android:id="@+id/edtTel"

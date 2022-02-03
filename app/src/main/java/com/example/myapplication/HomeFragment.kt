@@ -18,7 +18,7 @@ class HomeFragment : Fragment() {
     lateinit var bbb:Button
     lateinit var bbbb:Button
     lateinit var bbbbb:Button
-    lateinit var bbbbbb:Button
+    //lateinit var bbbbbb:Button
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,27 +37,27 @@ class HomeFragment : Fragment() {
 
         bbb = view.findViewById(R.id.mypageg)
         bbb.setOnClickListener{
-            val intent = Intent(getActivity(), MyPage::class.java)
+            val intent = Intent(getActivity(), LoveIt::class.java)
             startActivity(intent)
         }
 
         bbbb = view.findViewById(R.id.loveit)
         bbbb.setOnClickListener{
-            val intent = Intent(getActivity(), LoveIt::class.java)
+            val intent = Intent(getActivity(), MyPage::class.java)
             startActivity(intent)
         }
 
         bbbbb = view.findViewById(R.id.drawers)
         bbbbb.setOnClickListener{
-            val intent = Intent(getActivity(), Drawer::class.java)
+            val intent = Intent(getActivity(), category::class.java)
             startActivity(intent)
         }
 
-        bbbbbb = view.findViewById(R.id.bar)
+        /*bbbbbb = view.findViewById(R.id.bar)
         bbbbbb.setOnClickListener{
             val intent = Intent(getActivity(), bar::class.java)
             startActivity(intent)
-        }
+        }*/
 
 
     }

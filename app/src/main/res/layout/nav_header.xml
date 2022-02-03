@@ -11,23 +11,23 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_height="60dp"
         android:layout_width="60dp"
-        android:src="@drawable/cat"/>
+        android:src="@drawable/logo"/>
 
     <TextView
+        android:id="@+id/user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/user_name"
         android:paddingTop="8dp"
-        android:textSize="20dp"
-        android:text="Robin Single"
+        android:text="PicKit"
         android:textColor="@color/black"
-        android:textStyle="bold"/>
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16dp"
-        android:text="이메일은대충 이거다"/>
+        android:text="함께 모여 완성하는 사진, 픽킷"
+        android:textSize="16dp" />
 
     <View
         android:layout_width="match_parent"
