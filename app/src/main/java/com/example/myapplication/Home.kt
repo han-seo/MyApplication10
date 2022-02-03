@@ -92,11 +92,11 @@ class Home: AppCompatActivity() {
 
         val sliderItems: MutableList<SliderItem> = ArrayList()
 
-        sliderItems.add(SliderItem(R.drawable.cat))
-        sliderItems.add(SliderItem(R.drawable.cat))
-        sliderItems.add(SliderItem(R.drawable.cat))
-        sliderItems.add(SliderItem(R.drawable.cat))
-        sliderItems.add(SliderItem(R.drawable.cat))
+        sliderItems.add(SliderItem(R.drawable.home_h1))
+        sliderItems.add(SliderItem(R.drawable.home_h2))
+        sliderItems.add(SliderItem(R.drawable.home_h3))
+        sliderItems.add(SliderItem(R.drawable.home_h4))
+        sliderItems.add(SliderItem(R.drawable.home_h5))
 
         //클릭되는 버튼의 종류에 따라 보여지는 사진의 종류가 달라지도록 한다.
         button_1 = findViewById(R.id.button_1)
@@ -106,12 +106,11 @@ class Home: AppCompatActivity() {
 
         button_1.setOnClickListener{
             val sliderItems: MutableList<SliderItem> = ArrayList()
-            sliderItems.add(SliderItem(R.drawable.cat))
-            sliderItems.add(SliderItem(R.drawable.cat))
-            sliderItems.add(SliderItem(R.drawable.cat))
-            sliderItems.add(SliderItem(R.drawable.cat))
-            sliderItems.add(SliderItem(R.drawable.cat))
-            sliderItems.add(SliderItem(R.drawable.cat))
+            sliderItems.add(SliderItem(R.drawable.home_h1))
+            sliderItems.add(SliderItem(R.drawable.home_h2))
+            sliderItems.add(SliderItem(R.drawable.home_h3))
+            sliderItems.add(SliderItem(R.drawable.home_h4))
+            sliderItems.add(SliderItem(R.drawable.home_h5))
 
             viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
 
@@ -143,12 +142,11 @@ class Home: AppCompatActivity() {
 
         button_2.setOnClickListener{
             val sliderItems: MutableList<SliderItem> = ArrayList()
-            sliderItems.add(SliderItem(R.drawable.hello))
-            sliderItems.add(SliderItem(R.drawable.hello))
-            sliderItems.add(SliderItem(R.drawable.hello))
-            sliderItems.add(SliderItem(R.drawable.hello))
-            sliderItems.add(SliderItem(R.drawable.hello))
-            sliderItems.add(SliderItem(R.drawable.hello))
+            sliderItems.add(SliderItem(R.drawable.home_s1))
+            sliderItems.add(SliderItem(R.drawable.home_s2))
+            sliderItems.add(SliderItem(R.drawable.home_s3))
+            sliderItems.add(SliderItem(R.drawable.home_s6))
+            sliderItems.add(SliderItem(R.drawable.home_s1))
 
             viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
 
@@ -180,12 +178,11 @@ class Home: AppCompatActivity() {
 
         button_3.setOnClickListener{
             val sliderItems: MutableList<SliderItem> = ArrayList()
-            sliderItems.add(SliderItem(R.drawable.hello2))
-            sliderItems.add(SliderItem(R.drawable.hello2))
-            sliderItems.add(SliderItem(R.drawable.hello2))
-            sliderItems.add(SliderItem(R.drawable.hello2))
-            sliderItems.add(SliderItem(R.drawable.hello2))
-            sliderItems.add(SliderItem(R.drawable.hello2))
+            sliderItems.add(SliderItem(R.drawable.home_m1))
+            sliderItems.add(SliderItem(R.drawable.home_m6))
+            sliderItems.add(SliderItem(R.drawable.home_m3))
+            sliderItems.add(SliderItem(R.drawable.home_m4))
+            sliderItems.add(SliderItem(R.drawable.home_m5))
 
             viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
 
@@ -217,12 +214,11 @@ class Home: AppCompatActivity() {
 
         button_4.setOnClickListener{
             val sliderItems: MutableList<SliderItem> = ArrayList()
-            sliderItems.add(SliderItem(R.drawable.hello3))
-            sliderItems.add(SliderItem(R.drawable.hello3))
-            sliderItems.add(SliderItem(R.drawable.hello3))
-            sliderItems.add(SliderItem(R.drawable.hello3))
-            sliderItems.add(SliderItem(R.drawable.hello3))
-            sliderItems.add(SliderItem(R.drawable.hello3))
+            sliderItems.add(SliderItem(R.drawable.home_c1))
+            sliderItems.add(SliderItem(R.drawable.home_c2))
+            sliderItems.add(SliderItem(R.drawable.home_c3))
+            sliderItems.add(SliderItem(R.drawable.home_c4))
+            sliderItems.add(SliderItem(R.drawable.home_c5))
 
             viewPager2.adapter = SliderAdapter(sliderItems, viewPager2)
 

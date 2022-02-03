@@ -33,17 +33,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape_home"
+            android:background="@drawable/button_back"
             android:backgroundTint="#FFE1D7"
             android:text="추가하기"
             android:textColor="#070707"
             app:cornerRadius="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -132,50 +132,54 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/hairs"
                 android:layout_width="60dp"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/button_pressed"
                 android:backgroundTint="#FFE1D7"
                 android:color="@color/homeButton"
                 android:drawableTop="@drawable/make_up"
                 android:paddingTop="8dp"
                 android:scaleType="fitCenter" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/studios"
                 android:layout_width="60dp"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_marginLeft="30dp"
-                android:drawableTop="@drawable/studio"
-                android:scaleType="fitCenter"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_pressed"
                 android:backgroundTint="#FFE1D7"
+                android:drawableTop="@drawable/studio"
                 android:paddingTop="8dp"
-                android:layout_marginTop="10dp" />
+                android:scaleType="fitCenter" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/models"
                 android:layout_width="60dp"
-                android:layout_height="70dp"
+                android:layout_height="60dp"
                 android:layout_marginLeft="30dp"
-                android:drawableTop="@drawable/model"
-                android:scaleType="fitCenter"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_pressed"
                 android:backgroundTint="#FFE1D7"
+                android:drawableTop="@drawable/model"
                 android:paddingTop="8dp"
-                android:layout_marginTop="10dp" />
+                android:scaleType="fitCenter" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/cameraman"
                 android:layout_width="60dp"
-                android:layout_height="70dp"
-                android:drawableTop="@drawable/camera"
-                android:scaleType="fitCenter"
-                android:backgroundTint="#FFE1D7"
+                android:layout_height="60dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_pressed"
+                android:backgroundTint="#FFE1D7"
+                android:drawableTop="@drawable/camera"
                 android:paddingTop="8dp"
-                android:layout_marginTop="10dp" />
+                android:scaleType="fitCenter" />
         </LinearLayout>
 
         <LinearLayout
@@ -226,21 +230,21 @@
 
             <TextView
                 android:id="@+id/textView40"
-                android:layout_width="wrap_content"
+                android:layout_width="201dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:layout_weight="1"
                 android:text="오늘 단 하루!\n특가 할인스튜디오는 어디?"
                 android:textColor="#FFFFFF"
                 android:textSize="16dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/goMap"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="125dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/shape_home"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_back"
                 android:backgroundTint="#FFE1D7"
                 android:text="지도 보러가기"
                 android:textColor="#0A0A0A"
@@ -262,54 +266,56 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_1"
-                android:layout_width="92dp"
-                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="#FFE1D7"
+                android:background="@drawable/button_back"
                 android:text="헤어/메이크업"
                 android:textColor="#0B0B0B"
                 android:textSize="12sp"
                 app:cornerRadius="50dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_2"
                 android:layout_width="62dp"
-                android:layout_height="35dp"
+                android:layout_height="24dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
+                android:background="@drawable/button_back"
                 android:backgroundTint="#FFE1D7"
                 android:text="스튜디오"
                 android:textColor="#070707"
                 android:textSize="12sp"
                 app:cornerRadius="50dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_3"
                 android:layout_width="32dp"
-                android:layout_height="35dp"
+                android:layout_height="24dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="8dp"
                 android:layout_weight="1"
+                android:background="@drawable/button_back"
                 android:backgroundTint="#FFE1D7"
                 android:text="모델"
                 android:textColor="#000000"
                 android:textSize="12sp"
                 app:cornerRadius="50dp" />
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/button_4"
                 android:layout_width="62dp"
-                android:layout_height="35dp"
+                android:layout_height="24dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/shape_home"
+                android:background="@drawable/button_back"
                 android:backgroundTint="#FFE1D7"
                 android:text="사진작가"
                 android:textColor="#070707"
@@ -320,8 +326,10 @@
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/viewPager_ImageSlider"
             android:layout_width="match_parent"
-            android:layout_height="302dp">
-
+            android:layout_height="match_parent"
+            android:paddingStart="100dp"
+            android:paddingEnd="100dp"
+            android:layout_marginTop="20dp">
         </androidx.viewpager2.widget.ViewPager2>
 
         <RelativeLayout
