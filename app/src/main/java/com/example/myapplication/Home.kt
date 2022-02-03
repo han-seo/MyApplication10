@@ -5,10 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.RelativeLayout
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -16,10 +12,15 @@ import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import kotlin.math.abs
 import android.util.Pair
+import android.view.MenuItem
+import android.widget.*
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.bar.*
 
 
@@ -42,6 +43,9 @@ class Home: AppCompatActivity() {
     lateinit var button_3 : Button
     lateinit var button_4 : Button
     //
+    ///드로워 바 틀리면 지우기
+    lateinit var toggle : ActionBarDrawerToggle
+    ///
 
     private lateinit var binding: ActivityMainBinding
 
@@ -50,10 +54,7 @@ class Home: AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
-////
-        //initBinding()
-        //initNavigation()
-////
+
         hairs = findViewById(R.id.hairs)
         studios = findViewById(R.id.studios)
         models = findViewById(R.id.models)
@@ -297,6 +298,37 @@ class Home: AppCompatActivity() {
         })
 
 
+        //////////드로워 레이아웃 내용 틀리면 지우기////////
+
+
+        val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView : NavigationView = findViewById(R.id.nav_view)
+
+        toggle = ActionBarDrawerToggle(this,drawerLayout,R.string.open,R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+
+            when(it.itemId){
+                R.id.nav_home -> Toast.makeText(applicationContext,"홈 누름", Toast.LENGTH_SHORT).show()
+                R.id.nav_message -> Toast.makeText(applicationContext,"메시지 누름", Toast.LENGTH_SHORT).show()
+                R.id.nav_sync -> Toast.makeText(applicationContext,"싱크 누름", Toast.LENGTH_SHORT).show()
+                R.id.nav_trash -> Toast.makeText(applicationContext,"삭제 누름", Toast.LENGTH_SHORT).show()
+                R.id.settings-> Toast.makeText(applicationContext,"세팅 누름", Toast.LENGTH_SHORT).show()
+                R.id.nav_login -> Toast.makeText(applicationContext,"로그인 누름", Toast.LENGTH_SHORT).show()
+                R.id.nav_share -> Toast.makeText(applicationContext,"나눔 누름", Toast.LENGTH_SHORT).show()
+                R.id.nav_rate_us -> Toast.makeText(applicationContext,"뭔지모르겠지만 누름", Toast.LENGTH_SHORT).show()
+
+            }
+
+            true
+        }
+//////////////드로워 레이아웃 내용 틀리면 지우기////////
+
+
 
     }
 
@@ -323,4 +355,14 @@ class Home: AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.bar)
        // binding.lifecycleOwner = this
     }
+
+    ////드로워 레이아웃 틀리면 지우기////
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    ////드로워 레이아웃 클리면 지우기////
 }
