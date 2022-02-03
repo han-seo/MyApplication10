@@ -7,6 +7,7 @@ import java.lang.ref.WeakReference
 
 class ItemViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
 
+    //작가님 예약 페이지와 관련한 코드
     private val view = WeakReference(itemView)
     private lateinit var textView: TextView
     private lateinit var textViewDelete: TextView

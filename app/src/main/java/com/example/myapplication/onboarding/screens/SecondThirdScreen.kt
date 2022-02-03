@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_second_screen.view.*
 
 class SecondThirdScreen : Fragment() {
 
+    //네번째 온보딩 화면 코드
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

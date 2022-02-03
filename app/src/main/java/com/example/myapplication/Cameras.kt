@@ -22,11 +22,11 @@ import com.google.android.material.navigation.NavigationView
 
 class Cameras : AppCompatActivity() {
 
-    //카테고리 사진작가 목록 보여주는 관련 코드입니다
+    //카테고리 사진작가의 목록 보여주는 관련 코드
     lateinit var btn : Button
     val list = ArrayList<YoutubeItem>()
     val displayList = ArrayList<YoutubeItem>()
-    ///드로워 바 틀리면 지우기
+    ///드로워 바///
     lateinit var toggle : ActionBarDrawerToggle
     ///
 
@@ -63,6 +63,7 @@ class Cameras : AppCompatActivity() {
         val bitmap11 = BitmapFactory.decodeResource(resources10, R.drawable.camera4)
 
 
+        //키워드 검색을 위해 영어단어가 들어가야 함
         list.add(YoutubeItem(bitmap2!!,"권수혁 사진작가","Photographer who captures memories.","55"))
         list.add(YoutubeItem(bitmap3!!,"한수아 사진작가", "Photographer who brings out the mood.","99"))
         list.add(YoutubeItem(bitmap4!!,"김상엽 사진작가", "A photographer who captures individuality.","121"))
@@ -83,6 +84,7 @@ class Cameras : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //사용자가 콘탠츠 추가하기
         val titles = intent.getStringExtra("nick")
         val content = intent.getStringExtra("hello")
 
@@ -99,15 +101,12 @@ class Cameras : AppCompatActivity() {
         displayList.addAll(list)
         val adapter = RecyclerAdapter(displayList)
         //val adapter = RecyclerAdapter(list)
-        ////
-
-        ////
         recyclerView.adapter = adapter
 
         recyclerView.addItemDecoration(
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        ////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -175,12 +174,12 @@ class Cameras : AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+/////////드로워 레이아웃////////
 
 
     }
 
-    //내가 원하는 주제 가져오도록 서치 기능 더해봄, 틀리면 지워야됨
+    //내가 원하는 주제 가져오도록 서치 기능 더해봄, 틀리면 삭제
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         val menuItem = menu!!.findItem(R.id.search)
@@ -226,7 +225,7 @@ class Cameras : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }*/
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -234,5 +233,5 @@ class Cameras : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 }

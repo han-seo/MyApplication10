@@ -13,7 +13,8 @@ import kotlinx.android.synthetic.main.fragment_second_screen.view.*
 
 class FristTwoScreen : Fragment() {
 
-
+    //두번째 온보딩 화면 코드
+    //오타 조심 first인데 frist가 됨
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

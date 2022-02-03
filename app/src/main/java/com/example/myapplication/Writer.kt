@@ -12,8 +12,10 @@ import com.google.android.material.navigation.NavigationView
 
 class Writer : AppCompatActivity(){
 
+    //작가 클래스의 작가 소개
+    //홈페이지에서 연결된 사진과 텍스트 애니메이션 구현 코드
     lateinit var register :Button
-    ///드로워 바 틀리면 지우기
+    ///드로워 바
     lateinit var toggle : ActionBarDrawerToggle
     ///
 
@@ -33,7 +35,7 @@ class Writer : AppCompatActivity(){
         //
 
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -101,14 +103,14 @@ class Writer : AppCompatActivity(){
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+//////////////드로워 레이아웃////////
 
 
 
 
     }
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -116,6 +118,6 @@ class Writer : AppCompatActivity(){
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 
 }

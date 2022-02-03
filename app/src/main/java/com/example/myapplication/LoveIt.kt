@@ -21,7 +21,7 @@ import com.example.myapplication.view.UserAdapter
 import com.google.android.material.navigation.NavigationView
 
 class LoveIt : AppCompatActivity() {
-    //찜하기 관련 코드입니다.
+    //찜하기 관련 코드
     private lateinit var addsBtn:FloatingActionButton
     private lateinit var recv:RecyclerView
     private lateinit var userList:ArrayList<UserData>
@@ -37,7 +37,7 @@ class LoveIt : AppCompatActivity() {
     lateinit var layout : RecyclerView
     /////
 
-    ///드로워 바 틀리면 지우기
+    ///드로워 바//
     lateinit var toggle : ActionBarDrawerToggle
     ///
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -77,7 +77,7 @@ class LoveIt : AppCompatActivity() {
         //추가하는 기능도 만들자
         addsBtn.setOnClickListener { addInfo2() }
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -145,7 +145,7 @@ class LoveIt : AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+//////////////드로워 레이아웃////////
 
     }
 
@@ -268,7 +268,7 @@ class LoveIt : AppCompatActivity() {
     }
     /**ok now run this */
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -276,6 +276,6 @@ class LoveIt : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 
 }

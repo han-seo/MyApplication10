@@ -20,7 +20,7 @@ import com.google.android.material.navigation.NavigationView
 
 class newTry : AppCompatActivity() {
 
-    //이벤트 구글맵 후기를 뷰페이저2로 볼 수 있는 코드입니다.
+    //이벤트 구글맵 후기를 뷰페이저2로 볼 수 있는 코드
     private var vpAdapter: FragmentStateAdapter? = null
     ///드로워 바 틀리면 지우기
     lateinit var toggle : ActionBarDrawerToggle
@@ -48,7 +48,7 @@ class newTry : AppCompatActivity() {
         //배경 투명
         //window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -116,7 +116,7 @@ class newTry : AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+//////////////드로워 레이아웃////////
     }
 
 //    class CustomPagerAdapter(fm: FragmentManager): FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
@@ -144,6 +144,8 @@ class newTry : AppCompatActivity() {
             return PAGENUMBER
         }
 
+        //준비돈 후기들
+
         override fun createFragment(position: Int): Fragment {
             return when (position) {
                 0 -> TestFragment.newInstance(R.drawable.message1, "증명사진은 많이 찍어봤지만 프로필 사진은 처음이라 걱정되고 긴장도 많이 되었는데,\n" +
@@ -157,7 +159,7 @@ class newTry : AppCompatActivity() {
         }
     }
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -165,5 +167,5 @@ class newTry : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 }

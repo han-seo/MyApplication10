@@ -12,7 +12,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.viewpager.widget.PagerAdapter
 import com.example.myapplication.MyModel
 import kotlinx.android.synthetic.main.card_item.view.* //빌드 그래들에 플러그인 적용한것!
-//자료 이거보고 했음 https://www.androidhuman.com/2016-07-25-kotlin_android_extensions
+//자료 참고 https://www.androidhuman.com/2016-07-25-kotlin_android_extensions
 
 class MyAdapter(private val context: Context, private val myModelArrayList:ArrayList<MyModel>): PagerAdapter() {
 

@@ -12,6 +12,7 @@ import com.example.myapplication.databinding.TodoListBinding
 
 class TodoList : AppCompatActivity() {
 
+    //todolist 연습 코드입니다. 본 플젝과 관련없음
     lateinit var binding: TodoListBinding
     lateinit var datas: MutableList<String>
     lateinit var adapter: MyAdapters

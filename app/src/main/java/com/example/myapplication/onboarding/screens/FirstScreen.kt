@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_first_screen.view.*
 
 class FirstScreen : Fragment() {
 
+    //첫번째 온보딩 화면 코드
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

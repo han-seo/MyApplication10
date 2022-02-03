@@ -25,7 +25,7 @@ class Models : AppCompatActivity() {
     lateinit var btn : Button
     val list = ArrayList<YoutubeItem>()
     val displayList = ArrayList<YoutubeItem>()
-    ///드로워 바 틀리면 지우기
+    ///드로워 바
     lateinit var toggle : ActionBarDrawerToggle
     ///
 
@@ -60,7 +60,7 @@ class Models : AppCompatActivity() {
         val resources10: Resources = this.resources
         val bitmap11 = BitmapFactory.decodeResource(resources10, R.drawable.model6)
 
-        ////드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록, 틀리면 원상복귀 필요
+        ////드로어에이블 말고 비트맵으로 바꿔봄, 갤러리에서 사진 가져오도록
         list.add(YoutubeItem(bitmap2!!,"지윤 모델", "헤어 / 메이크업 개인 모델입니다.","212"))
         list.add(YoutubeItem(bitmap3!!,"도영 모델", "헤어 개인 모델입니다, 탈색 안합니다.","33"))
         list.add(YoutubeItem(bitmap4!!,"구예영 모델", "아나운서 헤어를 받고 싶습니다.","56"))
@@ -104,7 +104,7 @@ class Models : AppCompatActivity() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -176,7 +176,7 @@ class Models : AppCompatActivity() {
 
     }
 
-    //내가 원하는 주제 가져오도록 서치 기능 더해봄, 틀리면 지워야됨
+    //내가 원하는 주제 가져오도록 서치 기능 더해봄
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         val menuItem = menu!!.findItem(R.id.search)
@@ -222,7 +222,7 @@ class Models : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }*/
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -230,5 +230,5 @@ class Models : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 }

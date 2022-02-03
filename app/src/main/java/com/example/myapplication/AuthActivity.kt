@@ -30,6 +30,10 @@ class AuthActivity : AppCompatActivity() {
         binding= ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("로그인 및 회원가입");
+        //
+
         if(MyApplication.checkAuth()){
             changeVisibility("login")
         }else {
@@ -37,7 +41,7 @@ class AuthActivity : AppCompatActivity() {
         }
 
         binding.logoutBtn.setOnClickListener {
-            //로그아웃...........
+            //로그아웃버튼을 누르면
             MyApplication.auth.signOut()
             MyApplication.email=null
             changeVisibility("logout")
@@ -45,6 +49,7 @@ class AuthActivity : AppCompatActivity() {
         }
 
         binding.goSignInBtn.setOnClickListener{
+            //화원가입 버튼을 누르면
             changeVisibility("signin")
         }
 
@@ -61,14 +66,14 @@ class AuthActivity : AppCompatActivity() {
         }
 
         binding.signBtn.setOnClickListener {
-            //이메일,비밀번호 회원가입........................
+            //이메일,비밀번호 회원가입
             val email: String = binding.authEmailEditView.text.toString()
             val password: String = binding.authPasswordEditView.text.toString()
-            //김민혜 추가 코드 실험//
+            //추가 코드 실험//
             val name:String = binding.authNameEditView.text.toString()
             val id:String = binding.authIdEditView.text.toString()
             val phone:String = binding.authPhoneEditView.text.toString()
-            //김민혜 추가 코드 실험//
+            //추가 코드 실험//
 
             MyApplication.auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
@@ -80,8 +85,7 @@ class AuthActivity : AppCompatActivity() {
                     binding.authPhoneEditView.text.clear()
 
                     //받은 데이터 값을 저장하여야 함//
-
-                    //김민혜 추가 코드 실험//
+                    //추가 코드 실험//
 
                     if (task.isSuccessful) {
                         // 비밀번호는 최소 6자 이상
@@ -169,21 +173,21 @@ class AuthActivity : AppCompatActivity() {
             //이메일, 비밀번호 로그인
             val email: String = binding.authEmailEditView.text.toString()
             val password: String = binding.authPasswordEditView.text.toString()
-            //김민혜 추가 코드 실험//
+            //추가 코드 실험//
             val name:String = binding.authNameEditView.text.toString()
             val id:String = binding.authIdEditView.text.toString()
             val phone:String = binding.authPhoneEditView.text.toString()
-            //김민혜 추가 코드 실험//
+            //추가 코드 실험//
 
             MyApplication.auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     binding.authEmailEditView.text.clear()
                     binding.authPasswordEditView.text.clear()
-                    //김민혜 추가 코드 실험//
+                    //추가 코드 실험//
                     binding.authNameEditView.text.clear()
                     binding.authIdEditView.text.clear()
                     binding.authPhoneEditView.text.clear()
-                    //김민혜 추가 코드 실험//
+                    //추가 코드 실험//
                     if (task.isSuccessful) {
                         if(MyApplication.checkAuth()){
                             //로그인 성공 상황
@@ -251,11 +255,11 @@ class AuthActivity : AppCompatActivity() {
                 googleLoginBtn.visibility= View.GONE
                 authEmailEditView.visibility= View.GONE
                 authPasswordEditView.visibility= View.GONE
-                authNameEditView.visibility = View.GONE //김민혜 변경 코드 틀리면 지우기
-                authIdEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
-                authPhoneEditView.visibility = View.GONE //김민혜 변경 코드 틀리면 지우기
-                signBtn.visibility= View.GONE//김민혜 변경 코드 틀리면 지우기
-                loginBtn.visibility= View.GONE//김민혜 변경 코드 틀리면 지우기
+                authNameEditView.visibility = View.GONE //변경코드
+                authIdEditView.visibility = View.GONE//변경코드
+                authPhoneEditView.visibility = View.GONE //변경코드
+                signBtn.visibility= View.GONE//변경코드
+                loginBtn.visibility= View.GONE//변경코드
             }
 
         }else if(mode === "logout"){
@@ -266,11 +270,11 @@ class AuthActivity : AppCompatActivity() {
                 googleLoginBtn.visibility = View.VISIBLE
                 authEmailEditView.visibility = View.VISIBLE
                 authPasswordEditView.visibility = View.VISIBLE
-                authNameEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
-                authIdEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
-                authPhoneEditView.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
-                signBtn.visibility = View.GONE//김민혜 변경 코드 틀리면 지우기
-                loginBtn.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
+                authNameEditView.visibility = View.GONE//변경코드
+                authIdEditView.visibility = View.GONE//변경코드
+                authPhoneEditView.visibility = View.GONE//변경코드
+                signBtn.visibility = View.GONE//변경코드
+                loginBtn.visibility = View.VISIBLE//변경코드
                 startBtn.visibility = View.GONE
             }
         }else if(mode === "signin"){
@@ -279,11 +283,11 @@ class AuthActivity : AppCompatActivity() {
                 goSignInBtn.visibility = View.GONE///////////////////////////////////////////////
                 googleLoginBtn.visibility = View.GONE
                 authEmailEditView.visibility = View.VISIBLE
-                authPasswordEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
-                authNameEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
-                authIdEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
-                authPhoneEditView.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
-                signBtn.visibility = View.VISIBLE//김민혜 변경 코드 틀리면 지우기
+                authPasswordEditView.visibility = View.VISIBLE//변경코드
+                authNameEditView.visibility = View.VISIBLE//변경코드
+                authIdEditView.visibility = View.VISIBLE///변경코드
+                authPhoneEditView.visibility = View.VISIBLE//변경코드
+                signBtn.visibility = View.VISIBLE//변경코드
                 loginBtn.visibility = View.GONE
                 startBtn.visibility = View.GONE
             }

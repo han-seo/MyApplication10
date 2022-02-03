@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 class SplashFragment : Fragment() {
 
 
-    //로딩화면과 관련된 코드입니다. 픽킷의 로고가 3초동안 뜹니다.
+    //로딩화면과 관련된 코드. 픽킷의 로고가 3초동안 뜬다.
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -25,7 +25,7 @@ import java.io.File
 class EditList: AppCompatActivity() {
 
     //카테고리 항목을 새로 갱신할때 뜨는 새로운 페이지
-    lateinit var save : Button //Mypage의 디렉토리에 전달할 소중한 값들....
+    lateinit var save : Button //Mypage의 디렉토리에 전달할  값들...
     lateinit var nick: EditText
     lateinit var hello: EditText
     lateinit var thatImage : ImageView //이미지는 추후에 만들자 <- 만들었다
@@ -54,7 +54,7 @@ class EditList: AppCompatActivity() {
         }
 
         save.setOnClickListener{
-            /*굳이 안해도 될듯
+            /*굳이 안해도 될듯하다.
             saveData(title.text.toString(),
                 content.text.toString(),
             thatDay.text.toString(),

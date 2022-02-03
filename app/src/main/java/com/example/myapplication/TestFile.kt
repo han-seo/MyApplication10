@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class TestFile : AppCompatActivity(){
 
-    //이부분은 김민혜 마이페이지에 들어가기 위한 버튼입니다(시험용)
+    //이부분은 마이페이지에 들어가기 위한 버튼입니다(시험용)
     lateinit var Button : Button
     lateinit var Button2 : Button
     lateinit var Button3 : Button

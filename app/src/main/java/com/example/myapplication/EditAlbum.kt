@@ -23,8 +23,8 @@ import java.io.File
 
 class EditAlbum: AppCompatActivity() {
 
-    //나의 활동 앨범을 새로 갱신할때 뜨는 새로운 페이지
-    lateinit var save : Button //Mypage의 디렉토리에 전달할 소중한 값들....
+    //나의 활동 앨범을 새로 갱신할때 뜨는 새로운 페이지 코드
+    lateinit var save : Button //Mypage의 디렉토리에 전달할 값들....
     lateinit var title: EditText
     lateinit var content: EditText
     lateinit var thatDay: EditText
@@ -55,7 +55,7 @@ class EditAlbum: AppCompatActivity() {
         }
 
         save.setOnClickListener{
-            /*굳이 안해도 될듯
+            /*굳이 안해도 될것같다.
             saveData(title.text.toString(),
                 content.text.toString(),
             thatDay.text.toString(),

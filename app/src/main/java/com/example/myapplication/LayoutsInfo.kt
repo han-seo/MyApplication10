@@ -11,7 +11,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import kotlinx.android.synthetic.main.info_layouts.*
 
-//매니페스트 파일 activity 를 dialog로 하려니 안된다. 이거로 해봐야됨
+//연습파일
+//매니페스트 파일 activity 를 dialog로 하려니 안된다. 이것으로 시도
 class LayoutsInfo(context:Context) : Dialog(context)  {
 
     val TAG : String ="로그"

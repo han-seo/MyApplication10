@@ -9,6 +9,7 @@ import com.example.myapplication.SliderAdapter.SliderViewHolder
 import com.makeramen.roundedimageview.RoundedImageView
 
 class SliderAdapter internal constructor(
+        //메인홈의 뷰페이저2, 사진들을 자동으로 슬라이드 시켜주는 기능 관련 코드
     sliderItems: MutableList<SliderItem>,
     viewPager2:ViewPager2
 ): RecyclerView.Adapter<SliderViewHolder>(){

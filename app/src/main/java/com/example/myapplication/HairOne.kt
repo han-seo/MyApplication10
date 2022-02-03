@@ -33,13 +33,13 @@ import java.util.*
 class HairOne:AppCompatActivity() {
 
     //각각의 인물을 클릭하면 나오는 세부사항 페이지. 모든 인물이 공통적으로 이 페이지에서 값만 바꿔서 나오도록 할 것임
-    //쓸데없이 40명이 넘는 사람에 대한 페이지를 모두 만들지 말고 약간 붕어빵 틀같은 느낌적인 느낌
+    //쓸데없이 40명이 넘는 사람에 대한 페이지를 모두 만들지 말고 약간 붕어빵 틀같은 느낌적인 느낌으로 만든다.
     lateinit var back : Button
     /////
     lateinit var dbManager: DBManager2
     lateinit var sqlitedb : SQLiteDatabase
 
-    ///드로워 바 틀리면 지우기
+    ///드로워 바////
     lateinit var toggle : ActionBarDrawerToggle
     ///
 
@@ -173,7 +173,7 @@ class HairOne:AppCompatActivity() {
 
         }
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -241,12 +241,12 @@ class HairOne:AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+/////////드로워 레이아웃////////
 
 
     }
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -254,6 +254,6 @@ class HairOne:AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃/////
 
 }

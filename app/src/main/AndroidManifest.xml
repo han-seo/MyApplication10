@@ -25,17 +25,14 @@
             android:enabled="true"
             android:exported="true" /> <!-- 이 부분은 김민혜 마이페이지에 필요하여 더하였습니다 -->
         <activity android:name=".MyPage" />
-        <activity android:name=".bar"/>
         <activity android:name=".Students"/>
         <activity android:name=".PersonnelInfo"/>
         <activity android:name=".PersonnelList"/>
         <activity android:name=".PersonnelReg"/>
-        <activity android:name=".Drawer"/>
         <activity android:name=".EditAlbum" />
         <activity android:name=".CheckReservation" />
         <activity android:name=".ConfirmMyInfo" />
         <activity android:name=".EventMap" />
-        <activity android:name=".CheckHoXi" />
         <activity android:name=".newTry" />
         <activity android:name=".TestFile" />
         <activity android:name=".Home" />
@@ -49,18 +46,12 @@
         <activity android:name=".HairOne"/>
         <activity android:name=".AuthActivity"/>
         <activity android:name=".LoveIt"/>
-        <activity android:name=".category"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyA5jlW0hV9MjiL_kfKp8ZGqXCW4TVa-Qzc" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" /> <!-- 이 부분은 김민혜 마이페이지에 필요하여 더하였습니다 -->
-        <activity android:name=".newUpload" />
-        <activity android:name=".photo" />
-        <activity android:name=".hair" />
-        <activity android:name=".studio" />
-        <activity android:name=".hmPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -77,9 +68,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider> <!-- 이 부분은 김민혜 마이페이지에 필요하여 더하였습니다 -->
-        <activity android:name=".Login" />
-        <activity android:name=".IdpwSearch" />
-        <activity android:name=".Join" />
     </application>
 
 </manifest>

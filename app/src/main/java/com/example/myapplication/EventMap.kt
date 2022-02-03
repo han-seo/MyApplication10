@@ -72,7 +72,7 @@ class EventMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.InfoWindowAd
 
         //googleMap.setOnMarkerClickListener(this)
         googleMap.setInfoWindowAdapter(this)
-        googleMap.setOnInfoWindowClickListener(this)
+        googleMap.setOnInfoWindowClickListener(this)//인포윈도우를 클릭하면 또다른 이벤트가 일어나도록 한다.
 
 
         ////
@@ -136,6 +136,7 @@ class EventMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.InfoWindowAd
         return mWindow
     }
 
+    //인포윈도우로 해당 스튜디오의 정보를 알려준다.
     override fun getInfoWindow(marker: Marker): View? {
         var mWindow = layoutInflater.inflate(R.layout.info_layout, null,false)
         /*button5.setOnClickListener{

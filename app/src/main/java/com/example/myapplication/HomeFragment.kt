@@ -12,13 +12,14 @@ import android.widget.Toast
 
 class HomeFragment : Fragment() {
 
-    //메인 홈이 나타나기 전 코드입니다. 아마도 회원가입을 하지 않으셨군요! 하고 알려주는 페이지로 바뀔 듯 싶어요
+    //메인 홈이 나타나기 전 코드. 회원가입을 하지 않으셨군요! 하고 알려주는 페이지로 사용될 것.
     lateinit var b : Button
+    /*
     lateinit var bb:Button
     lateinit var bbb:Button
     lateinit var bbbb:Button
     lateinit var bbbbb:Button
-    //lateinit var bbbbbb:Button
+    //lateinit var bbbbbb:Button*/
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -11,9 +11,10 @@ class ViewPagerAdapter(
     lifecycle: Lifecycle
 ): FragmentStateAdapter(fm, lifecycle) {
 
+    //온보딩 관련 코드
     private val fragmentList:ArrayList<Fragment> = list
 
-    override fun getItemCount(): Int {
+    override fun getItemCount(): Int {//온보딩 화면 개수만큼 세기
         return fragmentList.size
     }
 

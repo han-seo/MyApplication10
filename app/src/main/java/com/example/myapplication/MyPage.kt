@@ -67,9 +67,6 @@ class MyPage : AppCompatActivity() {
     lateinit var editAlbum: ImageView
     ////여기는 나의 활동 편집 변수////
 
-    ////시험용 곧 지울것///
-    lateinit var button4 : Button
-    ///시럼용 곧 지울것///
 
     ///드로워 바 틀리면 지우기
     lateinit var toggle : ActionBarDrawerToggle
@@ -154,35 +151,9 @@ class MyPage : AppCompatActivity() {
         ///디데이용 변수///
         tv_result = findViewById(R.id.tv_result)
         calender_btn = findViewById(R.id.calender_button)
-        ///디데이용 변수///
+        ///디데이용 변수//
 
-
-        ////시험용, 수정 필요///
-        //
-        //
-        button4 = findViewById(R.id.button4)
-        button4.setOnClickListener{
-
-
-            val stream = ByteArrayOutputStream()
-            val bitmap2 = (userImageView.getDrawable() as BitmapDrawable).bitmap
-            val scale = (1024 / bitmap2.width.toFloat())
-            val image_w = (bitmap2.width * scale).toInt()
-            val image_h = (bitmap2.height * scale).toInt()
-            val resize = Bitmap.createScaledBitmap(bitmap2, image_w, image_h, true)
-            resize.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-            val byteArray = stream.toByteArray()
-
-            val intent = Intent(this, CheckHoXi::class.java)
-            //이거를 액티비티를 풀 받아서 필요한 액티비티에 모두 연결해 드린다.
-
-            intent.putExtra("image", byteArray)
-
-            startActivity(intent)
-
-        }
-
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -264,7 +235,7 @@ class MyPage : AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기///////
+//////////////드로워 레이아웃 내용/////////
 
     }
 
@@ -517,7 +488,7 @@ class MyPage : AppCompatActivity() {
         viewPager.setPadding(100, 0, 100, 0)
     }
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -525,6 +496,6 @@ class MyPage : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 
 }

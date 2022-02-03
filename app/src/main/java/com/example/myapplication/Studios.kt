@@ -22,11 +22,11 @@ import com.google.android.material.navigation.NavigationView
 
 class Studios : AppCompatActivity() {
 
-    //카테고리 스튜디오 관련 코드입니다.
+    //카테고리 스튜디오 관련 코드
     lateinit var btn : Button
     val list = ArrayList<YoutubeItem>()
     val displayList = ArrayList<YoutubeItem>()
-    ///드로워 바 틀리면 지우기
+    ///드로워 바
     lateinit var toggle : ActionBarDrawerToggle
     ///
 
@@ -104,7 +104,7 @@ class Studios : AppCompatActivity() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -172,7 +172,7 @@ class Studios : AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+//////////////드로워 레이아웃////////
 
     }
 
@@ -223,7 +223,7 @@ class Studios : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }*/
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -231,5 +231,5 @@ class Studios : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 }

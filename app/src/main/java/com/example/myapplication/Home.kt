@@ -22,8 +22,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.bar.*
-
 
 class Home: AppCompatActivity() {
 
@@ -44,7 +42,7 @@ class Home: AppCompatActivity() {
     lateinit var button_3 : Button
     lateinit var button_4 : Button
     //
-    ///드로워 바 틀리면 지우기
+    ///드로워 바
     lateinit var toggle : ActionBarDrawerToggle
     ///
     //프로필 사진
@@ -81,7 +79,7 @@ class Home: AppCompatActivity() {
         }
         ///////
 
-        //각 카테고리 클릭릭
+        //각 카테고리 클릭
         hairs.setOnClickListener{
             val intent = Intent(this, Hairs::class.java)
             startActivity(intent)
@@ -318,7 +316,7 @@ class Home: AppCompatActivity() {
         })
 
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        ////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -386,7 +384,7 @@ class Home: AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+////////드로워 레이아웃////////
 
 
 
@@ -407,16 +405,8 @@ class Home: AppCompatActivity() {
         sliderHandler.postDelayed(sliderRunnable, 1000)
     }
 
-    private fun initNavigation() {
-        NavigationUI.setupWithNavController(bn_, findNavController(R.id.fl_))
-    }
 
-    private fun initBinding() {
-        binding = DataBindingUtil.setContentView(this,R.layout.bar)
-       // binding.lifecycleOwner = this
-    }
-
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -424,5 +414,5 @@ class Home: AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 }

@@ -10,6 +10,7 @@ import androidx.core.app.RemoteInput
 
 class ReplyReceiver : BroadcastReceiver() {
 
+    //회원가입시 날아오는 카톡 구현 코드
         override fun onReceive(context: Context, intent: Intent) {
             // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
             //알람의 입력 글 획득

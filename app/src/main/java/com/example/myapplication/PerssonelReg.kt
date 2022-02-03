@@ -12,7 +12,7 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 
 class PersonnelReg : AppCompatActivity() {
-
+    //개인정보를 입력하고 수강생을 신청하는 코드/데이터베이스 관련.
     lateinit var dbManager: DBManager
     lateinit var sqlitedb : SQLiteDatabase
     lateinit var btnRegist : Button

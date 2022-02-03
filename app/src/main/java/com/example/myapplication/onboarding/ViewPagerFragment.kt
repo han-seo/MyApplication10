@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_view_pager.view.*
 
 class ViewPagerFragment : Fragment() {
 
+    //온보딩 관련 코드
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -19,7 +20,7 @@ class ViewPagerFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_view_pager, container, false)
 
-        val fragmentList = arrayListOf<Fragment>(
+        val fragmentList = arrayListOf<Fragment>(//내가 보여주기로 한 온보딩 화면
             FirstScreen(),
             FristTwoScreen(),
             SecondScreen(),

@@ -10,6 +10,7 @@ import com.google.firebase.storage.ktx.storage
 
 class MyApplication: MultiDexApplication() {
 
+    //회원가입 시 확인용 이메일을 보내는 코드
     companion object {
         lateinit var auth: FirebaseAuth
         var email: String? = null

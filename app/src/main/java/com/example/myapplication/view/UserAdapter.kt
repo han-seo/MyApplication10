@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.model.UserData
 
-//찜하기 기능과 관련된 코드입니다.
+//찜하기 기능과 관련된 코드
 class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.Adapter<UserAdapter.UserViewHolder>()
 {
 
@@ -33,7 +33,7 @@ class UserAdapter(val c:Context,val userList:ArrayList<UserData>):RecyclerView.A
             popupMenus.inflate(R.menu.show_menu)
             popupMenus.setOnMenuItemClickListener {
                 when(it.itemId){
-                    R.id.editText->{ //편집 기능.
+                    R.id.editText->{ //편집 기능. 이미 올라간 리스트를 다시 편집할 수 있다.
                         val v = LayoutInflater.from(c).inflate(R.layout.add_item,null)
                         val name = v.findViewById<EditText>(R.id.userName)
                         val number = v.findViewById<EditText>(R.id.userNo)

@@ -15,6 +15,8 @@ import kotlinx.android.synthetic.main.fragment_third_screen.view.*
 
 class ThirdScreen : Fragment() {
 
+    //파이널 온보딩 화면 코드
+    //마지막임을 알린다.
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -12,7 +12,8 @@ import com.google.android.material.navigation.NavigationView
 
 class Students: AppCompatActivity() {
 
-    ///드로워 바 틀리면 지우기
+    //작가 클래스 수강생 신청 관련 코드
+    ///드로워 바
     lateinit var toggle : ActionBarDrawerToggle
     ///
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class Students: AppCompatActivity() {
         getSupportActionBar()?.setTitle("수강생 등록");
         //
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃////////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -91,7 +92,7 @@ class Students: AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기///////
+//////////////드로워 레이아웃///////
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

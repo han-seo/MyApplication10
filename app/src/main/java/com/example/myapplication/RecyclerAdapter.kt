@@ -24,6 +24,7 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
     RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
 
+    //각각의 작가의 정보를 하나의 페이지에 공통적으로 적용시킬수 있도록 하는 코드
     override fun getItemCount() = items.size
 
     override fun onBindViewHolder(holder: RecyclerAdapter.ViewHolder, position: Int) {
@@ -33,7 +34,7 @@ class RecyclerAdapter(private val items: ArrayList<YoutubeItem>) :
 
 
             //여기서 데이터베이스 쌓으면 될 것같음
-
+            //아님
 
         }
 

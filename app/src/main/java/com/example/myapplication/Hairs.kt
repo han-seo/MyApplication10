@@ -35,14 +35,11 @@ class Hairs : AppCompatActivity() {
     val list = ArrayList<YoutubeItem>()
     val displayList = ArrayList<YoutubeItem>()
     lateinit var like_btn : LottieAnimationView
-    ///드로워 바 틀리면 지우기
+    ///드로워 바 틀리면 삭제 -> ok
     lateinit var toggle : ActionBarDrawerToggle
     ///
 
-
-
-
-    //카테고리 헤어/메이크업 관련 코드입니다.
+    //카테고리 헤어/메이크업 관련 코드
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hairs)
@@ -104,6 +101,7 @@ class Hairs : AppCompatActivity() {
         val titles = intent.getStringExtra("nick")
         val content = intent.getStringExtra("hello")
 
+        //사용자가 작가 업데이트 할 수 있도록
         if(content != null && titles !=null)
         {
             Toast.makeText(this, "추가되었습니다", Toast.LENGTH_SHORT).show()
@@ -123,7 +121,7 @@ class Hairs : AppCompatActivity() {
         recyclerView.addItemDecoration(
             DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        //////////드로워 레이아웃 내용 틀리면 지우기////////
+        //////////드로워 레이아웃/////
 
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
@@ -191,7 +189,7 @@ class Hairs : AppCompatActivity() {
 
             true
         }
-//////////////드로워 레이아웃 내용 틀리면 지우기////////
+//////////////드로워 레이아웃////////
 
     }
 
@@ -243,7 +241,7 @@ class Hairs : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }*/
 
-    ////드로워 레이아웃 틀리면 지우기////
+    ////드로워 레이아웃////
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){
@@ -251,5 +249,5 @@ class Hairs : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-    ////드로워 레이아웃 클리면 지우기////
+    ////드로워 레이아웃////
 }

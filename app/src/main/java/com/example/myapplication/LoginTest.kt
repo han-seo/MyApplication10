@@ -14,7 +14,7 @@ import com.example.myapplication.databinding.ActivityAddBinding
 import com.example.myapplication.databinding.LoginTestBinding
 
 
-
+//로그인 및 회원가입을 하는데 관련한 코드
 class LoginTest : AppCompatActivity() {
     lateinit var binding: LoginTestBinding
 
