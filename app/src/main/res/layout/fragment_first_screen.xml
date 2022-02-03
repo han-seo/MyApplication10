@@ -7,18 +7,6 @@
     tools:context=".onboarding.screens.FirstScreen">
 
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/hair_animation"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_fileName="hair.json"
-        app:lottie_loop="true" />
-
     <!--
     <ImageView
         android:id="@+id/imageView"
@@ -32,6 +20,20 @@
         app:layout_constraintVertical_bias="0.499" />-->
 
     <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/hair_animation"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.669"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="hair.json"
+        app:lottie_loop="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/make_up_animation"
         android:layout_width="243dp"
         android:layout_height="234dp"
@@ -40,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265"
+        app:layout_constraintVertical_bias="0.406"
         app:lottie_autoPlay="true"
         app:lottie_fileName="makeup.json"
         app:lottie_loop="true" />
@@ -49,6 +51,7 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Next"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,5 +60,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_constraintVertical_bias="0.908" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="헤어/메이크업을 연습 중인 나,"
+        android:textColor="#070707"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="452dp"
+        android:text="모델이 필요하다면?"
+        android:textColor="#090808"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
