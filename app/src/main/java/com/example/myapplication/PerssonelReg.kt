@@ -35,6 +35,10 @@ class PersonnelReg : AppCompatActivity() {
         rb_gender_m = findViewById(R.id.male)
         rb_gender_f = findViewById(R.id.female)
 
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("개인정보 입력 및 신청");
+        //
+
         dbManager = DBManager(this,"personnelDB",null,1)
 
         btnRegist.setOnClickListener{

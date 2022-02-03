@@ -34,6 +34,10 @@ class EditAlbum: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_album)
 
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("나의 활동 새로 업데이트하기");
+        //
+
         save = findViewById(R.id.save)
         title = findViewById(R.id.title)
         content = findViewById(R.id.content)

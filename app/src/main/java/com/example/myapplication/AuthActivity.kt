@@ -21,6 +21,8 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.GoogleAuthProvider
 
 //파이어베이스 로그인 관련 코드
+//회원가입을 한 뒤, 해당 이메일로 들어가 확인한다.
+//가입을 축하하는 카톡 메시지를 불러온다.
 class AuthActivity : AppCompatActivity() {
     lateinit var binding: ActivityAuthBinding
     override fun onCreate(savedInstanceState: Bundle?) {

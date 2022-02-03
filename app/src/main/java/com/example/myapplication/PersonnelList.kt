@@ -21,6 +21,10 @@ class PersonnelList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personnel_list)
 
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("개인정보 입력 및 신청");
+        //
+
         dbManager = DBManager(this,"personnelDB",null,1)
         sqlitedb = dbManager.readableDatabase
 

@@ -49,6 +49,10 @@ class EventMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.InfoWindowAd
         super.onCreate(savedInstanceState)
         setContentView(R.layout.event_map)
 
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("오늘의 반짝 할인 스튜디오");
+        //
+
         val mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment!!.getMapAsync(this)
 

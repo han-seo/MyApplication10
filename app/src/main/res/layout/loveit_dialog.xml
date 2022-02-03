@@ -19,6 +19,7 @@
             android:id="@+id/galleryButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
             android:text="지금 확인하기"
             android:textColor="#000000"
             app:backgroundTint="@color/white" />
@@ -28,6 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="나중에 확인하기"
+            android:stateListAnimator="@null"
             android:textColor="#000000"
             app:backgroundTint="#FFFFFF" />
 

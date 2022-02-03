@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="갤러리에서 불러오기"
+            android:stateListAnimator="@null"
             android:textColor="#000000"
             app:backgroundTint="@color/white" />
 
@@ -27,6 +28,7 @@
             android:id="@+id/cameraButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
             android:text="사진촬영하기"
             android:textColor="#000000"
             app:backgroundTint="#FFFFFF" />

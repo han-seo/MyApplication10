@@ -45,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_back"
                 android:backgroundTint="#FFE1D7"
+                android:fontFamily="@font/robotoregular"
                 android:text="추가하기"
                 android:textColor="#070707"
                 app:cornerRadius="40dp"

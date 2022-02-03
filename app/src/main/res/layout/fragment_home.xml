@@ -7,39 +7,78 @@
     tools:context=".HomeFragment"
     android:orientation="vertical">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadone_animation"
+        android:layout_width="320dp"
+        android:layout_height="316dp"
 
-    <Button
-        android:id="@+id/go"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="login.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/textView53"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="메인화면으로 이동" />
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nororegular"
+        android:text="PicKit에 가입하여\n활동을 시작해보세요!"
+        android:textAlignment="center"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/goLogin"
-        android:layout_width="wrap_content"
+    <android.widget.Button
+        android:id="@+id/button5"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="회원가입하기"
+        android:background="@drawable/button_back"
+        android:textColor="#040404" />
+    <!--
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="메인화면으로 이동" />
 
-        android:text="로그인" />
+        <Button
+            android:id="@+id/goLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
 
-    <Button
-        android:id="@+id/mypageg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="마이페이지로 이동" />
+            android:text="로그인" />
 
-    <Button
-        android:id="@+id/loveit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="찜하기로 이동" />
-    <Button
-        android:id="@+id/drawers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="카테고리 이동" />
+        <Button
+            android:id="@+id/mypageg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="마이페이지로 이동" />
+
+        <Button
+            android:id="@+id/loveit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="찜하기로 이동" />
+        <Button
+            android:id="@+id/drawers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="카테고리 이동" />
+
+            -->
 </LinearLayout>

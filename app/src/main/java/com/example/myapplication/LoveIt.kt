@@ -45,7 +45,7 @@ class LoveIt : AppCompatActivity() {
         setContentView(R.layout.love_it)
 
         //상단바 이름 바꾸기
-        getSupportActionBar()?.setTitle("스크랩(찜하기)");
+        getSupportActionBar()?.setTitle("스크랩하기(찜하기)");
         //
         /**set List*/
         userList = ArrayList()

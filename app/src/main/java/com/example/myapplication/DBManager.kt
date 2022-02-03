@@ -4,7 +4,8 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-//데이터베이스 관련 코드입니다.
+//데이터베이스 관련 코드
+//사진 클래스 수강생 신청 관련 코드
 
 class DBManager(
     context: Context?,

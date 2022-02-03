@@ -38,6 +38,9 @@ class LoginTest : AppCompatActivity() {
             }
         }*/
         /////////////////////////////////////
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("로그인 및 회원가입");
+        //
 
     }
 

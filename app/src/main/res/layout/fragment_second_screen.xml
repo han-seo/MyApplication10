@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:lottie_autoPlay="true"
-        app:lottie_fileName="instagram.json"
+        app:lottie_fileName="phone.json"
         app:lottie_loop="true" />
 
     <TextView
@@ -27,6 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/robotobold"
         android:text="Next"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +41,8 @@
         android:id="@+id/textView45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="212dp"
+        android:layout_marginBottom="200dp"
+        android:fontFamily="@font/nororegular"
         android:text="예쁜 인스타그램용 사진을 찍고 싶은 나,"
         android:textColor="#090808"
         android:textSize="18sp"
@@ -55,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="160dp"
+        android:fontFamily="@font/nororegular"
         android:text="나를 찍어줄 사진작가님이 필요하다면?"
         android:textColor="#070707"
         android:textSize="22sp"

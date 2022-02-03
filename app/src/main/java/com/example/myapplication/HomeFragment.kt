@@ -23,12 +23,13 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        b = view.findViewById(R.id.go)
+
+        b = view.findViewById(R.id.button5)
         b.setOnClickListener{
-            val intent = Intent(getActivity(), Home::class.java)
+            val intent = Intent(getActivity(), LoginTest::class.java)
             startActivity(intent)
         }
-
+/*
         bb = view.findViewById(R.id.goLogin)
         bb.setOnClickListener{
             val intent = Intent(getActivity(), LoginTest::class.java)
@@ -51,7 +52,7 @@ class HomeFragment : Fragment() {
         bbbbb.setOnClickListener{
             val intent = Intent(getActivity(), category::class.java)
             startActivity(intent)
-        }
+        }*/
 
         /*bbbbbb = view.findViewById(R.id.bar)
         bbbbbb.setOnClickListener{

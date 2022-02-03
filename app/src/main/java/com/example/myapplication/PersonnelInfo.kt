@@ -28,6 +28,10 @@ class PersonnelInfo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personnel_info)
 
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("개인정보 입력 및 신청");
+        //
+
         tvName = findViewById(R.id.edtName)
         tvGender = findViewById(R.id.gender)
         tvAge = findViewById(R.id.edtAge)

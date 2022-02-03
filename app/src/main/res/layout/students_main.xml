@@ -16,8 +16,12 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GURU 수강생 관리"
-            android:textSize="36sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/nororegular"
+            android:text="사진 클래스\n수강생을 등록해보세요!"
+            android:textAlignment="center"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.528"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -25,18 +29,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.261" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="56dp"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/hair_animation"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.522"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.051"
-            app:srcCompat="@drawable/home" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.669"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="study.json"
+            app:lottie_loop="true" />
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

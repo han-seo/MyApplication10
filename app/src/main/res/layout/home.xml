@@ -197,6 +197,7 @@
                     android:layout_width="42dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
+                    android:layout_marginTop="3dp"
                     android:layout_weight="1"
                     android:text="헤어/메이크업" />
 
@@ -204,7 +205,8 @@
                     android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="18dp"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="3dp"
                     android:layout_weight="1"
                     android:text="스튜디오" />
 
@@ -213,6 +215,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="3dp"
                     android:layout_weight="1"
                     android:text="모델" />
 
@@ -221,6 +224,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
+                    android:layout_marginTop="3dp"
                     android:layout_weight="1"
                     android:text="사진작가" />
             </LinearLayout>
@@ -241,7 +245,8 @@
                     android:layout_marginTop="10dp"
                     android:text="오늘 단 하루!\n특가 할인스튜디오는 어디?"
                     android:textColor="#FFFFFF"
-                    android:textSize="16dp" />
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <android.widget.Button
                     android:id="@+id/goMap"

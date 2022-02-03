@@ -24,7 +24,7 @@ import java.io.File
 
 class EditList: AppCompatActivity() {
 
-    //나의 활동 앨범을 새로 갱신할때 뜨는 새로운 페이지
+    //카테고리 항목을 새로 갱신할때 뜨는 새로운 페이지
     lateinit var save : Button //Mypage의 디렉토리에 전달할 소중한 값들....
     lateinit var nick: EditText
     lateinit var hello: EditText
@@ -38,6 +38,10 @@ class EditList: AppCompatActivity() {
         nick = findViewById(R.id.nick)
         hello = findViewById(R.id.hello)
         thatImage = findViewById(R.id.thatImage)
+
+        //상단바 이름 바꾸기
+        getSupportActionBar()?.setTitle("작가 업로드");
+        //
 
         //이미지는따로 사진을 클릭하면 갤러리에 들어가서 고를 수 있도록 한다.
         thatImage.setOnClickListener{
