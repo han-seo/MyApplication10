@@ -129,7 +129,7 @@ class AuthActivity : AppCompatActivity() {
                                         builder = NotificationCompat.Builder(this)
                                     }
                                     builder.run{
-                                        setSmallIcon(R.drawable.small)
+                                        setSmallIcon(R.drawable.logo)
                                         setWhen(System.currentTimeMillis())
                                         setContentTitle("PicKit")
                                         setContentText("가입을 축하드립니다")

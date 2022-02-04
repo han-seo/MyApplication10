@@ -74,21 +74,13 @@
 
                         <TextView
                             android:id="@+id/textView3"
-                            android:layout_width="80dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:hint="00 님"
+                            android:hint="SkyStar 님"
+                            android:textColor="#060606"
+                            android:textColorHint="#000000"
                             android:textSize="30sp" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/shape_rect"
-                            android:backgroundTint="#ACD4E6"
-                            android:text="사진작가"
-                            android:textSize="24sp" />
 
                     </LinearLayout>
 

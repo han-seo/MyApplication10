@@ -52,9 +52,9 @@ class Models : AppCompatActivity() {
         val resources6: Resources = this.resources
         val bitmap7 = BitmapFactory.decodeResource(resources6, R.drawable.model1)
         val resources7: Resources = this.resources
-        val bitmap8 = BitmapFactory.decodeResource(resources7, R.drawable.model2)
+        val bitmap8 = BitmapFactory.decodeResource(resources7, R.drawable.model3)
         val resources8: Resources = this.resources
-        val bitmap9 = BitmapFactory.decodeResource(resources8, R.drawable.model3)
+        val bitmap9 = BitmapFactory.decodeResource(resources8, R.drawable.model2)
         val resources9: Resources = this.resources
         val bitmap10 = BitmapFactory.decodeResource(resources9, R.drawable.model5)
         val resources10: Resources = this.resources

@@ -72,7 +72,8 @@ class EventMap : AppCompatActivity(), OnMapReadyCallback, GoogleMap.InfoWindowAd
 
         //googleMap.setOnMarkerClickListener(this)
         googleMap.setInfoWindowAdapter(this)
-        googleMap.setOnInfoWindowClickListener(this)//인포윈도우를 클릭하면 또다른 이벤트가 일어나도록 한다.
+        googleMap.setOnInfoWindowClickListener(this)
+        //인포윈도우를 클릭하면 또다른 이벤트가 일어나도록 설정
 
 
         ////

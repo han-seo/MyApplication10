@@ -182,7 +182,7 @@ class LoveIt : AppCompatActivity() {
         sqlitedb.close()
         dbManager.close()*/
 
-        userList.add(UserData("Name: $str_name","Mobile No. : $str_tel"))
+        userList.add(UserData("Name: 강동원 모델","소개 : 크리스마스 컨셉으로 사진을 찍고 싶습니다"))
         userAdapter.notifyDataSetChanged()
 
 
@@ -232,7 +232,7 @@ class LoveIt : AppCompatActivity() {
         {
             val names = content.toString()
             val number = thatDay.toString()
-            userList.add(UserData("Name: $names","Mobile No. : $number"))
+            userList.add(UserData("Name: $names","소개. : $number"))
             userAdapter.notifyDataSetChanged()
         }
     }
@@ -252,7 +252,7 @@ class LoveIt : AppCompatActivity() {
                 dialog,_->
             val names = userName.text.toString()
             val number = userNo.text.toString()
-            userList.add(UserData("Name: $names","Mobile No. : $number"))
+            userList.add(UserData("Name: $names","소개. : $number"))
             userAdapter.notifyDataSetChanged()
             Toast.makeText(this,"Adding User Information Success",Toast.LENGTH_SHORT).show()
             dialog.dismiss()

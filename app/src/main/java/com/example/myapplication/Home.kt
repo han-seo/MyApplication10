@@ -375,7 +375,7 @@ class Home: AppCompatActivity() {
                 }
                 R.id.nav_loveit ->
                 {
-                    var intent = Intent(this,LoveIt::class.java)
+                    var intent = Intent(this,LoveIt2::class.java)
                     startActivity(intent)
 
                 }
