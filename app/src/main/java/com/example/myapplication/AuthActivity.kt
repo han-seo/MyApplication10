@@ -133,7 +133,7 @@ class AuthActivity : AppCompatActivity() {
                                         setWhen(System.currentTimeMillis())
                                         setContentTitle("PicKit")
                                         setContentText("가입을 축하드립니다")
-                                        setLargeIcon(BitmapFactory.decodeResource(resources,R.drawable.big))
+                                        setLargeIcon(BitmapFactory.decodeResource(resources,R.drawable.logo))
                                     }
                                     val KEY_TEXT_REPLY = "key_text_reply"
                                     val replyLabel : String="답장"
